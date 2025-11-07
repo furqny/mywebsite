@@ -1,106 +1,123 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Furkan YILDIZ - Portfolio</title>
-  <link rel="stylesheet" href="css/style.css">
-
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furkan Yıldız - Game Developer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- menü -->
+    <!-- Navigation Bar -->
     <header>
-      <nav>
-        <a href="#home">Ana Sayfa</a>
-        <a href="#projects">Projeler</a>
-        <a href="#about">Hakkımda</a>
-        <a href="#contact">İletişim</a>
-      </nav>
+        <nav>
+            <ul>
+                 <li><a href="about.html">About Me</a></li>
+            </ul>
+        </nav>
     </header>
-  
-    <!-- kahraman alanı -->
+
+    <!-- Main Section -->
     <section id="home">
-  <img src="img/balance.png" alt="Furkan Yıldız portre fotoğrafı">
+        <div class="intro">
+            <h1>Furkan Yıldız</h1>
+            <p>Game Developer | Passionate About Creating Games</p>
+        </div>
+    </section>
 
-  <div class="hero-text">
-    <h1>Merhaba, ben Furkan.</h1>
-    <p>Game Desginer</p>
-  </div>
-</section>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card" onclick="window.location.href='project1.html';">
+                <img src="project1-cover.jpg" alt="Project 1">
+                <p>Project 1</p>
+            </div>
+            <div class="project-card" onclick="window.location.href='project2.html';">
+                <img src="project2-cover.jpg" alt="Project 2">
+                <p>Project 2</p>
+            </div>
+            <div class="project-card" onclick="window.location.href='project3.html';">
+                <img src="project3-cover.jpg" alt="Project 3">
+                <p>Project 3</p>
+            </div>
+        </div>
+    </section>
 
-      
-  
-   <!-- projeler -->
-<section id="projects" class="my-3">
-  <div class="container">
-    <h2 class="mb-2"><span>Projeler</span></h2>
-
-    <div class="row">
-      <div class="col-4">
-        <a href="why-not.html" class="card">
-          <img src="img/game1.png" alt="Why Not oyun görseli">
-          <h3>Why Not</h3>
-          <p>Unity | Side Scroll</p>
-        </a>
-      </div>
-
-      <div class="col-4">
-        <a href="black-magic.html" class="card">
-          <img src="img/game2.png" alt="Black Magic oyun görseli" >
-          <h3>Black Magic</h3>
-          <p>Unity | Platform | Shooter</p>
-        </a>
-      </div>
-
-      <div class="col-4">
-        <a href="red-knight.html" class="card">
-          <img src="img/game3.png" alt="Red Knight oyun görseli" >
-          <h3>Red Knight</h3>
-          <p>Unity | Top-Down | Platform</p>
-        </a>
-      </div>
-
-      <div class="col-4">
-        <a href="hallowed-decay.html" class="card">
-          <img src="img/game4.png" alt="Hallowed Decay oyun görseli" >
-          <h3>Hallowed Decay</h3>
-          <p>Unreal | FPS | Psychological Horror</p>
-        </a>
-      </div>
-
-      <div class="col-4">
-        <a href="visual-design.html" class="card">
-          <img src="img/game5.png" alt="Visual Design proje görseli" >
-          <h3>VISUAL DESIGN</h3>
-          <p>2D/3D ART</p>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
-      
-  
-    <!-- hakkımda -->
+    <!-- About Me Section -->
     <section id="about">
-      <h2><span>Hakkımda</span></h2>
-      <p>Muğla Sıtkı Koçman Üniversitesi - Dijital Oyun Tasarımı öğrencisiyim. Unreal ve Unity ile projeler yapıyorum. Tasarım kısmında 2D/3D dizaynlarımda mevcut.</p>
+        <h2>About Me</h2>
+        <p>Hi, I'm Furkan, a passionate game developer with experience in creating engaging gaming experiences. Here are my social media profiles, email, and CVs.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/furkanyildiz" target="_blank">LinkedIn</a>
+            <a href="mailto:furkanyildiz@example.com">Email</a>
+            <a href="cv.pdf" target="_blank">Download CV</a>
+        </div>
     </section>
-  
-    <!-- iletişim -->
-    <section id="contact">
-      <h2>İletişim</h2>
-      <form>
-        <input type="text" placeholder="Ad Soyad">
-        <input type="email" placeholder="E-posta">
-        <textarea placeholder="Mesajın"></textarea>
-        <button type="submit">Gönder</button>
-      </form>
-    </section>
-  
+
+    <!-- Footer -->
     <footer>
-      <p>© 2025 Furkan Yıldız</p>
+        <p>&copy; 2025 Furkan Yıldız | All rights reserved</p>
     </footer>
-  </body>
-  
+</body>
+</html><!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furkan Yıldız - Game Developer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section id="home">
+        <div class="intro">
+            <h1>Furkan Yıldız</h1>
+            <p>Game Developer | Passionate About Creating Games</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card" onclick="window.location.href='project1.html';">
+                <img src="project1-cover.jpg" alt="Project 1">
+                <p>Project 1</p>
+            </div>
+            <div class="project-card" onclick="window.location.href='project2.html';">
+                <img src="project2-cover.jpg" alt="Project 2">
+                <p>Project 2</p>
+            </div>
+            <div class="project-card" onclick="window.location.href='project3.html';">
+                <img src="project3-cover.jpg" alt="Project 3">
+                <p>Project 3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm Furkan, a passionate game developer with experience in creating engaging gaming experiences. Here are my social media profiles, email, and CVs.</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/furkanyildiz" target="_blank">LinkedIn</a>
+            <a href="mailto:furkanyildiz@example.com">Email</a>
+            <a href="cv.pdf" target="_blank">Download CV</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Furkan Yıldız | All rights reserved</p>
+    </footer>
+</body>
 </html>
