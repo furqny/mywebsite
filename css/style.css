@@ -257,53 +257,59 @@ h2 span::after {<
   margin: 0 auto;
 }
 
-/* İLETİŞİM */
+/* İletişim bölümü (ikonlu versiyon) */
 #contact {
-  background: #020617;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 70px 20px;
 }
 
-#contact form {
+#contact h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+.contact-links {
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
-  max-width: 400px;
-  margin: 0 auto;
-  background: #0b1120;
-  padding: 1.8rem 1.5rem;
-  border-radius: 14px;
-  box-shadow: 0 16px 35px rgba(0,0,0,0.45);
-  border: 1px solid #1f2937;
+  align-items: center;
+  gap: 20px;
 }
 
-input,
-textarea {
-  padding: 0.6rem 0.8rem;
-  border: 1px solid #1f2937;
-  border-radius: 0.4rem;
-  background: #020617;
-  color: #e5e7eb;
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.1rem;
+  color: #ffc35a;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-input::placeholder,
-textarea::placeholder {
-  color: #6b7280;
-  font-size: 0.9rem;
+.contact-item i {
+  font-size: 1.5rem;
 }
 
-button {
-  padding: 0.7rem 0.8rem;
-  border-radius: 0.4rem;
-  border: none;
-  background: #6366f1;
-  color: white;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 0.4rem;
+.contact-item:hover {
+  color: #a9e8eb;
+  transform: translateY(-3px);
 }
 
-button:hover {
-  background: #4f46e5;
+@media (min-width: 768px) {
+  .contact-links {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
+
 
 /* FOOTER */
 footer {
