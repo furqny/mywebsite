@@ -1,0 +1,336 @@
+/* GENEL AYARLAR */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #020617;          /* koyu lacivert / siyah arka plan */
+  color: #e5e7eb;               /* açık gri metin */
+}
+
+
+
+/* Metin */
+p {
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ÜST MENÜ */
+header {
+  background: rgba(15, 23, 42, 0.95);
+  border-bottom: 1px solid #1f2937;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+nav a:hover {
+  color: #c7d2fe; /* açık mor/mavi ton, çok hafif değişim */
+}
+
+
+/* hover alt çizgi efekti */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #6366f1;
+  transition: width 0.2s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* 12 COL GRID SİSTEMİ */
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;              /* ortala */
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);  /* 12 eşit kolon */
+  gap: 1rem;                               /* kolonlar arası boşluk */
+}
+
+/* kolonlar */
+.col-12 { grid-column: span 12; }
+.col-11 { grid-column: span 11; }
+.col-10 { grid-column: span 10; }
+.col-9  { grid-column: span 9; }
+.col-8  { grid-column: span 8; }
+.col-7  { grid-column: span 7; }
+.col-6  { grid-column: span 6; }
+.col-5  { grid-column: span 5; }
+.col-4  { grid-column: span 4; }
+.col-3  { grid-column: span 3; }
+.col-2  { grid-column: span 2; }
+.col-1  { grid-column: span 1; }
+
+/* responsive: telefonda hepsi 12 olsun */
+@media (max-width: 900px) {
+  .row {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .col-6,
+  .col-4,
+  .col-3 {
+    grid-column: span 12;
+  }
+}
+
+/* BÖLÜMLER GENEL */
+section {
+  padding: 80px 16px;
+}
+
+#home {
+  padding: 0;   /* hero bölümünde padding yok, görsel tam ekrana oturur */
+}
+
+/* HERO (HOME) */
+#home {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+#home h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  margin-bottom: 8px;
+}
+
+#home p {
+  max-width: 480px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+#home img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border-radius: 0;
+  margin: 0;
+  filter: brightness(40%);   /* 👈 görseli %60 parlak yapar */
+}
+
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 1rem;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  max-width: 480px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+
+/* BAŞLIKLAR */
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 span {
+  color: #6366f1;        /* accent renk */
+}
+
+/* İsteğe bağlı: altında çok hafif bir çizgi */
+h2 span::after {<
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #4f46e5;
+  margin: 8px auto 0;
+  border-radius: 999px;
+}
+
+
+/* PROJELER KISMI */
+#projects {
+  background: #020617;
+}
+
+#projects h2 {
+  color: #e5e7eb;
+}
+
+/* Proje kartları */
+.card {
+  background: #0f172a;
+  border-radius: 14px;
+  padding: 1.4rem 1rem 1.8rem;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+  text-align: center;
+  height: 100%;
+  border: 1px solid #1f2937;
+
+  /* link olduğu için önemli olanlar */
+  text-decoration: none;   /* alt çizgiyi kaldır */
+  color: inherit;          /* yazı rengi normal kalsın */
+  display: block;          /* A etiketi kutu gibi davransın */
+
+  /* hover animasyonları */
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65);
+  border-color: #6366f1;
+}
+
+
+.card img {
+  display: block;
+  width: 100%;        /* kartın iç genişliğine göre ayarla */
+  max-width: 100%;    /* taşmasın */
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* HAKKIMDA */
+#about {
+  background: #0b1120;
+}
+
+#about p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* İLETİŞİM */
+#contact {
+  background: #020617;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #0b1120;
+  padding: 1.8rem 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 16px 35px rgba(0,0,0,0.45);
+  border: 1px solid #1f2937;
+}
+
+input,
+textarea {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #1f2937;
+  border-radius: 0.4rem;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+button {
+  padding: 0.7rem 0.8rem;
+  border-radius: 0.4rem;
+  border: none;
+  background: #6366f1;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.4rem;
+}
+
+button:hover {
+  background: #4f46e5;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem 2rem;
+  background: #020617;
+  color: #6b7280;
+  font-size: 0.85rem;
+  border-top: 1px solid #1f2937;
+}
+
+/* TELEFON GÖRÜNÜMÜ – SADECE MENÜ İÇİN */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* MARGIN YARDIMCI SINIFLARI (DERSTE KULLANIM İÇİN) */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+
+.my-2 { margin-top: 1rem; margin-bottom: 1rem; }
+.mx-2 { margin-left: 1rem; margin-right: 1rem; }
