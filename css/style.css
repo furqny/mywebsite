@@ -16,8 +16,6 @@ body {
   color: #e5e7eb;               /* açık gri metin */
 }
 
-
-
 /* Metin */
 p {
   text-align: center;
@@ -52,7 +50,6 @@ nav a {
 nav a:hover {
   color: #c7d2fe; /* açık mor/mavi ton, çok hafif değişim */
 }
-
 
 /* hover alt çizgi efekti */
 nav a::after {
@@ -113,60 +110,45 @@ section {
   padding: 80px 16px;
 }
 
-#home {
-  padding: 0;   /* hero bölümünde padding yok, görsel tam ekrana oturur */
-}
-
-/* HERO (HOME) */
+/* HERO (HOME) - MODERN VERSİYON */
 #home {
   position: relative;
+  height: 100vh; 
+  display: flex;
+  align-items: center; /* Dikey ortalama */
+  justify-content: center; /* Yatay ortalama */
   text-align: center;
   color: white;
-}
+  padding: 0;
 
-#home h1 {
-  font-size: clamp(2.2rem, 4vw, 3rem);
-  margin-bottom: 8px;
+  /* ARKA PLAN RESMİ */
+  /* CSS dosyası klasörde olduğu için ../img ile dışarı çıkıp img klasörüne giriyoruz */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/first.png');
+  background-size: cover;      
+  background-position: center; 
+  background-attachment: fixed; /* Parallax Efekti */
 }
-
-#home p {
-  max-width: 480px;
-  margin: 0 auto;
-  opacity: 0.9;
-}
-
-#home img {
-  display: block;
-  width: 100%;
-  max-width: none;
-  height: auto;
-  border-radius: 0;
-  margin: 0;
-  filter: brightness(40%);   /* 👈 görseli %60 parlak yapar */
-}
-
 
 .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0 1rem;
   z-index: 1;
+  padding: 0 1rem;
 }
 
 .hero-text h1 {
-  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 .hero-text p {
-  max-width: 480px;
+  font-size: 1.5rem;
+  font-weight: 300;
+  max-width: 600px;
   margin: 0 auto;
-  line-height: 1.6;
+  opacity: 0.9;
+  letter-spacing: 1px;
 }
-
-
 
 /* BAŞLIKLAR */
 h2 {
@@ -179,8 +161,8 @@ h2 span {
   color: #6366f1;        /* accent renk */
 }
 
-/* İsteğe bağlı: altında çok hafif bir çizgi */
-h2 span::after {<
+/* HATA DÜZELTİLDİ: Buradaki < işareti silindi */
+h2 span::after {
   content: "";
   display: block;
   width: 40px;
@@ -189,7 +171,6 @@ h2 span::after {<
   margin: 8px auto 0;
   border-radius: 999px;
 }
-
 
 /* PROJELER KISMI */
 #projects {
@@ -209,16 +190,11 @@ h2 span::after {<
   text-align: center;
   height: 100%;
   border: 1px solid #1f2937;
-
-  /* link olduğu için önemli olanlar */
-  text-decoration: none;   /* alt çizgiyi kaldır */
-  color: inherit;          /* yazı rengi normal kalsın */
-  display: block;          /* A etiketi kutu gibi davransın */
-
-  /* hover animasyonları */
+  text-decoration: none;
+  color: inherit; 
+  display: block; 
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
-
 
 .card:hover {
   transform: translateY(-8px) scale(1.02);
@@ -226,16 +202,14 @@ h2 span::after {<
   border-color: #6366f1;
 }
 
-
 .card img {
   display: block;
-  width: 100%;        /* kartın iç genişliğine göre ayarla */
-  max-width: 100%;    /* taşmasın */
+  width: 100%;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
-
 
 .card h3 {
   font-size: 1.2rem;
@@ -257,7 +231,7 @@ h2 span::after {<
   margin: 0 auto;
 }
 
-/* İletişim bölümü (ikonlu versiyon) */
+/* İletişim bölümü */
 #contact {
   background-color: #111;
   color: #fff;
@@ -310,7 +284,6 @@ h2 span::after {<
   }
 }
 
-
 /* FOOTER */
 footer {
   text-align: center;
@@ -329,7 +302,7 @@ footer {
   }
 }
 
-/* MARGIN YARDIMCI SINIFLARI (DERSTE KULLANIM İÇİN) */
+/* MARGIN YARDIMCI SINIFLARI */
 .mt-1 { margin-top: 0.5rem; }
 .mt-2 { margin-top: 1rem; }
 .mt-3 { margin-top: 1.5rem; }
@@ -340,3 +313,38 @@ footer {
 
 .my-2 { margin-top: 1rem; margin-bottom: 1rem; }
 .mx-2 { margin-left: 1rem; margin-right: 1rem; }
+
+/* --- YENİ BUTON STİLLERİ --- */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: #6366f1; /* Temandaki mor renk */
+  color: white;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #6366f1;
+  color: #6366f1;
+}
+
+.btn-outline:hover {
+  background: #6366f1;
+  color: white;
+}
