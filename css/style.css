@@ -93,14 +93,15 @@ nav a:hover::after {
 .col-2  { grid-column: span 2; }
 .col-1  { grid-column: span 1; }
 
-/* responsive: telefonda hepsi 12 olsun */
+/* responsive: telefonda (veya tablet dikeyde) tüm kolonlar tam genişlik olsun */
 @media (max-width: 900px) {
   .row {
     grid-template-columns: repeat(12, 1fr);
   }
-  .col-6,
-  .col-4,
-  .col-3 {
+  
+  /* TÜM KOLONLARI BURAYA EKLEDİK 👇 */
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
+  .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
     grid-column: span 12;
   }
 }
@@ -349,21 +350,54 @@ footer {
   color: white;
 }
 
-/* --- MOBİL İÇİN ÖZEL AYARLAR --- */
-/* (En alta ekle) */
+/* ========================================= */
+/* MOBİL VE TABLET DÜZENLEMELERİ       */
+/* (Bu kısmı style.css'in en altına ekle)*/
+/* ========================================= */
 
-@media (max-width: 768px) {
-  /* Bölüm boşluklarını mobilde azaltalım (80px'den 50px'e) */
+@media (max-width: 900px) {
+  
+  /* 1. GRID SİSTEMİNİ DÜZELTME (Sıkışmayı Önler) */
+  /* Tüm kolonları alt alta dizer, genişletir */
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
+  .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    grid-column: span 12;
+  }
+  
+  /* Row aralığını biraz açalım ki elementler yapışmasın */
+  .row {
+    gap: 2rem; 
+  }
+
+  /* 2. BOŞLUKLARI AZALTMA */
   section {
     padding: 50px 16px;
   }
-
-  /* Hero başlığını mobilde biraz küçültelim ki taşmasın */
-  .hero-text h1 {
-    font-size: 2.5rem; 
+  
+  .container {
+    width: 95%; /* Mobilde kenarlarda daha az boşluk bırak */
   }
 
-  /* Kartların içindeki resimlerin alt boşluğunu ayarlayalım */
+  /* 3. METİN OKUNABİLİRLİĞİ */
+  /* Genel paragrafları sola yasla */
+  p {
+    text-align: left; 
+    padding: 0 5px;
+  }
+
+  /* İstisnalar: Hero, Kartlar ve Footer ortalı kalsın */
+  .hero-text p, 
+  .card p, 
+  footer p,
+  h2 {
+    text-align: center;
+  }
+
+  /* 4. FONT BOYUTLARI */
+  .hero-text h1 {
+    font-size: 2.2rem; 
+  }
+  
   .card {
     margin-bottom: 20px;
   }
