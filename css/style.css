@@ -402,3 +402,101 @@ footer {
     margin-bottom: 20px;
   }
 }
+
+/* ========================================= */
+/* HAMBURGER MENÜ AYARLARI             */
+/* ========================================= */
+
+/* 1. Masaüstü Varsayılanı: İkonu Gizle */
+.menu-toggle {
+  display: none; /* Bilgisayarda ikon görünmesin */
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #e5e7eb;
+}
+
+/* Linkleri tutan kutu masaüstünde yan yana olsun */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* 2. Mobil Görünüm (768px altı) */
+@media (max-width: 768px) {
+  
+  nav {
+    justify-content: space-between; /* İkonu sağa, logoyu sola iter (logo varsa) */
+    align-items: center;
+    flex-wrap: wrap; /* Menü açılınca aşağı taşabilsin diye */
+  }
+
+  /* İkonu görünür yap */
+  .menu-toggle {
+    display: block; 
+    margin-left: auto; /* İkonu en sağa iter */
+  }
+
+  /* Linkleri başlangıçta GİZLE */
+  .nav-links {
+    display: none; /* Menü kapalı başlar */
+    width: 100%;   /* Açılınca tam genişlik */
+    flex-direction: column; /* Linkler alt alta dizilsin */
+    text-align: center;
+    margin-top: 1rem;
+    background: rgba(15, 23, 42, 0.95); /* Menü arka planı */
+    padding-bottom: 1rem;
+    border-top: 1px solid #333;
+  }
+
+/* style.css EN ALT KISIMDAKİ İLGİLİ YERLERİ BUNUNLA DEĞİŞTİR */
+
+@media (max-width: 768px) {
+  
+  /* ... (yukarıdaki diğer kodlar kalsın) ... */
+
+  /* İkonu görünür yap */
+  .menu-toggle {
+    display: block; 
+    margin-left: auto;
+  }
+
+  /* --- ANİMASYONLU MENÜ KODLARI --- */
+  .nav-links {
+    /* display: none; YERİNE: */
+    display: flex;            /* Yapı hep orada olsun ama gizli olsun */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: rgba(15, 23, 42, 0.95);
+    border-top: 1px solid #333;
+    
+    /* GİZLEME AYARLARI (Kapalıyken) */
+    max-height: 0;            /* Yükseklik sıfır */
+    opacity: 0;               /* Görünmez */
+    overflow: hidden;         /* Taşan kısımları gizle */
+    padding: 0;               /* Kapalıyken dolgu olmasın */
+    margin-top: 0;
+    
+    /* ANİMASYON AYARI (SİHİR BURADA) */
+    /* 0.4 saniyede açılsın, ease-out ile yumuşak dursun */
+    transition: all 0.4s ease-in-out;
+  }
+
+  /* JavaScript "active" sınıfını eklediğinde: */
+  .nav-links.active {
+    /* AÇILMA AYARLARI */
+    max-height: 500px;        /* Yeterince büyük bir değer veriyoruz */
+    opacity: 1;               /* Tam görünür */
+    padding-bottom: 1rem;     /* Alt boşluk ekle */
+    margin-top: 1rem;         /* Üst boşluk ekle */
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    /* Linkler de hafifçe gecikmeli gelsin istersen: */
+    transition: color 0.3s; 
+  }
+}
+}
