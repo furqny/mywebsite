@@ -348,3 +348,23 @@ footer {
   background: #6366f1;
   color: white;
 }
+
+/* --- MOBİL İÇİN ÖZEL AYARLAR --- */
+/* (En alta ekle) */
+
+@media (max-width: 768px) {
+  /* Bölüm boşluklarını mobilde azaltalım (80px'den 50px'e) */
+  section {
+    padding: 50px 16px;
+  }
+
+  /* Hero başlığını mobilde biraz küçültelim ki taşmasın */
+  .hero-text h1 {
+    font-size: 2.5rem; 
+  }
+
+  /* Kartların içindeki resimlerin alt boşluğunu ayarlayalım */
+  .card {
+    margin-bottom: 20px;
+  }
+}
