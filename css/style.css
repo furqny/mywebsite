@@ -410,8 +410,6 @@ footer {
   z-index: 2001;
 }
 
-/* style.css İÇİNDE DEĞİŞECEK KISIM */
-
 /* İleri / Geri Butonları (BÜYÜK BOY) */
 .prev-btn, .next-btn {
   cursor: pointer;
@@ -422,7 +420,7 @@ footer {
   margin-top: -50px;
   color: white;
   font-weight: bold;
-  font-size: 55px;     /* İŞTE BURASI: Okları büyüten kod (30px -> 55px) */
+  font-size: 55px;     /* Okları büyüten kod */
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -435,9 +433,6 @@ footer {
 .prev-btn:hover, .next-btn:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-
-.prev-btn { left: 0; border-radius: 0 3px 3px 0; }
-.next-btn { right: 0; border-radius: 3px 0 0 3px; }
 
 .prev-btn:hover, .next-btn:hover, .close-btn:hover {
   color: #bbb;
@@ -505,25 +500,37 @@ footer {
     font-size: 1.1rem;
   }
 
-/* Mobilde Lightbox Okları */
+  /* Mobilde Lightbox Okları */
   .prev-btn, .next-btn { 
     padding: 15px; 
     font-size: 35px; /* Mobilde de büyüttük (Eski: 20px) */
   }
 
-  /* -------------------------------------- */
-/* 3D MODEL VİEWER STİLLERİ             */
+} /* DİKKAT: MOBİL MEDYA SORGUSU BURADA BİTİYOR! */
+
+
+/* -------------------------------------- */
+/* 3D MODEL VİEWER STİLLERİ - ARTIK DIŞARIDA */
 /* -------------------------------------- */
 
 .models-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Varsayılan (Mobil): Alt alta */
+    grid-template-columns: 1fr; 
     gap: 2rem;
     margin-bottom: 3rem;
 }
 
+/* 600px'den büyük ekranlarda yan yana */
+@media (min-width: 600px) {
+    .models-grid {
+        grid-template-columns: 1fr 1fr; /* YAN YANA 2 TANE */
+    }
+}
+
 .model-card {
-    background: rgba(255, 255, 255, 0.05); /* Hafif şeffaf kutu */
+    width: 100%; /* Kutunun genişliği garanti olsun */
+    background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     overflow: hidden;
@@ -531,40 +538,26 @@ footer {
 }
 
 .model-card:hover {
-    border-color: #a855f7; /* Hover olunca mor çerçeve */
+    border-color: #a855f7;
     transform: translateY(-5px);
 }
 
-/* Google Model Viewer Bileşeni */
 model-viewer {
     width: 100%;
-    height: 350px; /* Model penceresinin yüksekliği */
-    background-color: #1e1e2e; /* Modelin arkasındaki renk */
+    height: 600px;
+    background-color: #1e1e2e;
     --poster-color: transparent;
 }
 
 .model-info {
     padding: 15px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .model-info h4 {
     margin: 0;
     color: #a855f7;
-    font-size: 1.2rem;
-}
-
-.model-info p {
-    margin: 5px 0 0;
-    font-size: 0.9rem;
-    color: #9ca3af;
-}
-
-.divider {
-    border: 0;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.1);
-    margin: 3rem 0;
-}
+    font-size: 1.4rem;
+    font-weight: 600;
 }
