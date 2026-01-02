@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data:;">
   <title>Furkan YILDIZ - Portfolio</title>
+  <link rel="icon" type="image/png" href="img/icon.png">
   <link rel="stylesheet" href="css/style.css">
   
   <!-- Font Awesome ikonları -->
@@ -103,11 +105,20 @@
       
   
     <!-- about me -->
-    <section id="about">
-      <h2><span>Hakkımda</span></h2>
-      <p>Muğla Sıtkı Koçman Üniversitesi - Dijital Oyun Tasarımı öğrencisiyim. Unreal ve Unity ile projeler yapıyorum. Tasarım kısmında 2D/3D dizaynlarımda mevcut.</p>
-    </section>
-  
+<section id="about">
+  <h2><span>Hakkımda</span></h2>
+  <p class="mb-3">
+    Muğla Sıtkı Koçman Üniversitesi - Dijital Oyun Tasarımı öğrencisiyim...
+    
+  </p>
+
+  <div style="text-align: center;">
+    <a href="doc/Furkan_Yildiz_CV.pdf" target="_blank" class="btn btn-outline">
+      <i class="fa-solid fa-download"></i> Özgeçmişimi İndir
+    </a>
+  </div>
+
+</section>
    <!-- contact -->
 <section id="contact">
   <h2>İletişim</h2>

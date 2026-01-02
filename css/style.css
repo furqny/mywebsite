@@ -1,4 +1,6 @@
-/* GENEL AYARLAR */
+/* ========================================= */
+/* 1. GENEL AYARLAR VE SIFIRLAMA        */
+/* ========================================= */
 * {
   box-sizing: border-box;
 }
@@ -12,17 +14,18 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background: #020617;          /* koyu lacivert / siyah arka plan */
-  color: #e5e7eb;               /* açık gri metin */
+  background: #020617;
+  color: #e5e7eb;
 }
 
-/* Metin */
 p {
   text-align: center;
   line-height: 1.6;
 }
 
-/* ÜST MENÜ */
+/* ========================================= */
+/* 2. ÜST MENÜ VE HEADER               */
+/* ========================================= */
 header {
   background: rgba(15, 23, 42, 0.95);
   border-bottom: 1px solid #1f2937;
@@ -37,6 +40,7 @@ nav {
   gap: 1.5rem;
   padding: 1rem 2rem;
   justify-content: center;
+  align-items: center;
 }
 
 nav a {
@@ -48,10 +52,9 @@ nav a {
 }
 
 nav a:hover {
-  color: #c7d2fe; /* açık mor/mavi ton, çok hafif değişim */
+  color: #c7d2fe;
 }
 
-/* hover alt çizgi efekti */
 nav a::after {
   content: "";
   position: absolute;
@@ -67,19 +70,33 @@ nav a:hover::after {
   width: 100%;
 }
 
-/* 12 COL GRID SİSTEMİ */
+/* Hamburger Menü İkonu */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #e5e7eb;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* ========================================= */
+/* 3. GRID SİSTEMİ (LAYOUT)            */
+/* ========================================= */
 .container {
   width: min(1100px, 92%);
-  margin: 0 auto;              /* ortala */
+  margin: 0 auto;
 }
 
 .row {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);  /* 12 eşit kolon */
-  gap: 1rem;                               /* kolonlar arası boşluk */
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
 }
 
-/* kolonlar */
 .col-12 { grid-column: span 12; }
 .col-11 { grid-column: span 11; }
 .col-10 { grid-column: span 10; }
@@ -93,41 +110,26 @@ nav a:hover::after {
 .col-2  { grid-column: span 2; }
 .col-1  { grid-column: span 1; }
 
-/* responsive: telefonda (veya tablet dikeyde) tüm kolonlar tam genişlik olsun */
-@media (max-width: 900px) {
-  .row {
-    grid-template-columns: repeat(12, 1fr);
-  }
-  
-  /* TÜM KOLONLARI BURAYA EKLEDİK 👇 */
-  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
-  .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
-    grid-column: span 12;
-  }
-}
-
-/* BÖLÜMLER GENEL */
 section {
   padding: 80px 16px;
 }
 
-/* HERO (HOME) - MODERN VERSİYON */
+/* ========================================= */
+/* 4. HERO (ANA SAYFA)                 */
+/* ========================================= */
 #home {
   position: relative;
   height: 100vh; 
   display: flex;
-  align-items: center; /* Dikey ortalama */
-  justify-content: center; /* Yatay ortalama */
+  align-items: center;
+  justify-content: center;
   text-align: center;
   color: white;
   padding: 0;
-
-  /* ARKA PLAN RESMİ */
-  /* CSS dosyası klasörde olduğu için ../img ile dışarı çıkıp img klasörüne giriyoruz */
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/first.png');
   background-size: cover;      
   background-position: center; 
-  background-attachment: fixed; /* Parallax Efekti */
+  background-attachment: fixed;
 }
 
 .hero-text {
@@ -151,18 +153,17 @@ section {
   letter-spacing: 1px;
 }
 
-/* BAŞLIKLAR */
+/* ========================================= */
+/* 5. BAŞLIKLAR, KARTLAR, BUTONLAR     */
+/* ========================================= */
 h2 {
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
 
-h2 span {
-  color: #6366f1;        /* accent renk */
-}
+h2 span { color: #6366f1; }
 
-/* HATA DÜZELTİLDİ: Buradaki < işareti silindi */
 h2 span::after {
   content: "";
   display: block;
@@ -173,16 +174,12 @@ h2 span::after {
   border-radius: 999px;
 }
 
-/* PROJELER KISMI */
-#projects {
-  background: #020617;
-}
+#projects { background: #020617; }
+#projects h2 { color: #e5e7eb; }
+#about { background: #0b1120; }
+#about p { max-width: 700px; margin: 0 auto; }
 
-#projects h2 {
-  color: #e5e7eb;
-}
-
-/* Proje kartları */
+/* Kartlar */
 .card {
   background: #0f172a;
   border-radius: 14px;
@@ -206,33 +203,49 @@ h2 span::after {
 .card img {
   display: block;
   width: 100%;
-  max-width: 100%;
-  height: auto;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
 
-.card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+.card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.card p { font-size: 0.95rem; opacity: 0.9; }
+
+/* Butonlar */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
 }
 
-.card p {
-  font-size: 0.95rem;
-  opacity: 0.9;
+.btn-primary {
+  background-color: #6366f1;
+  color: white;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
 }
 
-/* HAKKIMDA */
-#about {
-  background: #0b1120;
+.btn-primary:hover {
+  background-color: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
 }
 
-#about p {
-  max-width: 700px;
-  margin: 0 auto;
+.btn-outline {
+  background: transparent;
+  border: 1px solid #6366f1;
+  color: #6366f1;
 }
 
-/* İletişim bölümü */
+.btn-outline:hover { background: #6366f1; color: white; }
+
+/* ========================================= */
+/* 6. İLETİŞİM VE FOOTER               */
+/* ========================================= */
 #contact {
   background-color: #111;
   color: #fff;
@@ -240,17 +253,8 @@ h2 span::after {
   padding: 70px 20px;
 }
 
-#contact h2 {
-  font-size: 2.2rem;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
-}
-
-#contact p {
-  font-size: 1.1rem;
-  margin-bottom: 40px;
-  color: #ddd;
-}
+#contact h2 { font-size: 2.2rem; margin-bottom: 25px; }
+#contact p { font-size: 1.1rem; margin-bottom: 40px; color: #ddd; }
 
 .contact-links {
   display: flex;
@@ -269,23 +273,13 @@ h2 span::after {
   transition: all 0.3s ease;
 }
 
-.contact-item i {
-  font-size: 1.5rem;
-}
-
-.contact-item:hover {
-  color: #a9e8eb;
-  transform: translateY(-3px);
-}
+.contact-item i { font-size: 1.5rem; }
+.contact-item:hover { color: #a9e8eb; transform: translateY(-3px); }
 
 @media (min-width: 768px) {
-  .contact-links {
-    flex-direction: row;
-    justify-content: center;
-  }
+  .contact-links { flex-direction: row; justify-content: center; }
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 1.5rem 1rem 2rem;
@@ -295,208 +289,225 @@ footer {
   border-top: 1px solid #1f2937;
 }
 
-/* TELEFON GÖRÜNÜMÜ – SADECE MENÜ İÇİN */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    align-items: center;
-  }
+/* Yardımcı Sınıflar */
+.mt-1 { margin-top: 0.5rem; } .mt-2 { margin-top: 1rem; } .mt-3 { margin-top: 1.5rem; }
+.mb-1 { margin-bottom: 0.5rem; } .mb-2 { margin-bottom: 1rem; } .mb-3 { margin-bottom: 1.5rem; }
+.text-center { text-align: center; }
+
+/* ========================================= */
+/* 7. OYUN DETAY SAYFASI ÖZEL STİLLERİ */
+/* ========================================= */
+.game-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
 }
 
-/* MARGIN YARDIMCI SINIFLARI */
-.mt-1 { margin-top: 0.5rem; }
-.mt-2 { margin-top: 1rem; }
-.mt-3 { margin-top: 1.5rem; }
-
-.mb-1 { margin-bottom: 0.5rem; }
-.mb-2 { margin-bottom: 1rem; }
-.mb-3 { margin-bottom: 1.5rem; }
-
-.my-2 { margin-top: 1rem; margin-bottom: 1rem; }
-.mx-2 { margin-left: 1rem; margin-right: 1rem; }
-
-/* --- YENİ BUTON STİLLERİ --- */
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-  border: 1px solid transparent;
+.game-subtitle {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-.btn-primary {
-  background-color: #6366f1; /* Temandaki mor renk */
-  color: white;
-  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+.game-media img, .game-media iframe {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  display: block;
 }
 
-.btn-primary:hover {
-  background-color: #4f46e5;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
-}
-
-.btn-outline {
-  background: transparent;
-  border: 1px solid #6366f1;
+.role-list { list-style: none; padding: 0; }
+.role-list li { position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; line-height: 1.6; }
+.role-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
   color: #6366f1;
+  font-weight: bold;
 }
 
-.btn-outline:hover {
-  background: #6366f1;
+.tech-box {
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+.tech-box h4 { border-bottom: 1px solid #333; padding-bottom: 10px; margin-top: 0; color: #c7d2fe; }
+.tech-box ul { list-style: none; padding: 0; margin: 0; }
+.tech-box li { margin-bottom: 12px; display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
+.tech-box li i { color: #6366f1; width: 20px; }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+  gap: 1rem;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.gallery-grid img:hover { transform: scale(1.03); z-index: 2; }
+
+.game-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+
+/* ========================================= */
+/* 8. LIGHTBOX (BÜYÜTEÇ) KODLARI - BURADA! */
+/* ========================================= */
+.lightbox {
+  display: none; /* Gizli başlar */
+  position: fixed; /* Ekrana sabitlenir */
+  z-index: 2000;   /* En üst katman */
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9); /* Siyah perde */
+  justify-content: center;
+  align-items: center;
+}
+
+/* JavaScript "active" sınıfı ekleyince görünür olur */
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1000px;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  animation: zoom 0.3s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* Kapatma ve İleri/Geri Butonları */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+/* style.css İÇİNDE DEĞİŞECEK KISIM */
+
+/* İleri / Geri Butonları (BÜYÜK BOY) */
+.prev-btn, .next-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 20px;       /* Tıklama alanı genişledi */
+  margin-top: -50px;
   color: white;
+  font-weight: bold;
+  font-size: 55px;     /* İŞTE BURASI: Okları büyüten kod (30px -> 55px) */
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 2001;
+}
+
+.prev-btn { left: 0; border-radius: 0 3px 3px 0; }
+.next-btn { right: 0; border-radius: 3px 0 0 3px; }
+
+.prev-btn:hover, .next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn { left: 0; border-radius: 0 3px 3px 0; }
+.next-btn { right: 0; border-radius: 3px 0 0 3px; }
+
+.prev-btn:hover, .next-btn:hover, .close-btn:hover {
+  color: #bbb;
+  background-color: rgba(255,255,255,0.1);
 }
 
 /* ========================================= */
-/* MOBİL VE TABLET DÜZENLEMELERİ       */
-/* (Bu kısmı style.css'in en altına ekle)*/
+/* 9. MOBİL VE TABLET AYARLARI (SONDA) */
 /* ========================================= */
 
+/* Tablet ve Mobil Genel */
 @media (max-width: 900px) {
-  
-  /* 1. GRID SİSTEMİNİ DÜZELTME (Sıkışmayı Önler) */
-  /* Tüm kolonları alt alta dizer, genişletir */
   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
   .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
     grid-column: span 12;
   }
+  .row { gap: 2rem; }
+  section { padding: 50px 16px; }
+  .container { width: 95%; }
   
-  /* Row aralığını biraz açalım ki elementler yapışmasın */
-  .row {
-    gap: 2rem; 
-  }
-
-  /* 2. BOŞLUKLARI AZALTMA */
-  section {
-    padding: 50px 16px;
-  }
-  
-  .container {
-    width: 95%; /* Mobilde kenarlarda daha az boşluk bırak */
-  }
-
-  /* 3. METİN OKUNABİLİRLİĞİ */
-  /* Genel paragrafları sola yasla */
-  p {
-    text-align: left; 
-    padding: 0 5px;
-  }
-
-  /* İstisnalar: Hero, Kartlar ve Footer ortalı kalsın */
-  .hero-text p, 
-  .card p, 
-  footer p,
-  h2 {
-    text-align: center;
-  }
-
-  /* 4. FONT BOYUTLARI */
-  .hero-text h1 {
-    font-size: 2.2rem; 
-  }
-  
-  .card {
-    margin-bottom: 20px;
-  }
+  p { text-align: left; padding: 0 5px; }
+  .hero-text p, .card p, footer p, h2, .game-subtitle { text-align: center; }
+  .hero-text h1 { font-size: 2.2rem; }
+  .card { margin-bottom: 20px; }
 }
 
-/* ========================================= */
-/* HAMBURGER MENÜ AYARLARI             */
-/* ========================================= */
-
-/* 1. Masaüstü Varsayılanı: İkonu Gizle */
-.menu-toggle {
-  display: none; /* Bilgisayarda ikon görünmesin */
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: #e5e7eb;
-}
-
-/* Linkleri tutan kutu masaüstünde yan yana olsun */
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-}
-
-/* 2. Mobil Görünüm (768px altı) */
+/* Mobil Menü */
 @media (max-width: 768px) {
-  
   nav {
-    justify-content: space-between; /* İkonu sağa, logoyu sola iter (logo varsa) */
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Menü açılınca aşağı taşabilsin diye */
+    flex-wrap: wrap;
   }
 
-  /* İkonu görünür yap */
-  .menu-toggle {
-    display: block; 
-    margin-left: auto; /* İkonu en sağa iter */
-  }
-
-  /* Linkleri başlangıçta GİZLE */
-  .nav-links {
-    display: none; /* Menü kapalı başlar */
-    width: 100%;   /* Açılınca tam genişlik */
-    flex-direction: column; /* Linkler alt alta dizilsin */
-    text-align: center;
-    margin-top: 1rem;
-    background: rgba(15, 23, 42, 0.95); /* Menü arka planı */
-    padding-bottom: 1rem;
-    border-top: 1px solid #333;
-  }
-
-/* style.css EN ALT KISIMDAKİ İLGİLİ YERLERİ BUNUNLA DEĞİŞTİR */
-
-@media (max-width: 768px) {
-  
-  /* ... (yukarıdaki diğer kodlar kalsın) ... */
-
-  /* İkonu görünür yap */
   .menu-toggle {
     display: block; 
     margin-left: auto;
   }
 
-  /* --- ANİMASYONLU MENÜ KODLARI --- */
   .nav-links {
-    /* display: none; YERİNE: */
-    display: flex;            /* Yapı hep orada olsun ama gizli olsun */
+    display: flex;
     flex-direction: column;
     width: 100%;
     text-align: center;
     background: rgba(15, 23, 42, 0.95);
     border-top: 1px solid #333;
-    
-    /* GİZLEME AYARLARI (Kapalıyken) */
-    max-height: 0;            /* Yükseklik sıfır */
-    opacity: 0;               /* Görünmez */
-    overflow: hidden;         /* Taşan kısımları gizle */
-    padding: 0;               /* Kapalıyken dolgu olmasın */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
     margin-top: 0;
-    
-    /* ANİMASYON AYARI (SİHİR BURADA) */
-    /* 0.4 saniyede açılsın, ease-out ile yumuşak dursun */
     transition: all 0.4s ease-in-out;
   }
 
-  /* JavaScript "active" sınıfını eklediğinde: */
   .nav-links.active {
-    /* AÇILMA AYARLARI */
-    max-height: 500px;        /* Yeterince büyük bir değer veriyoruz */
-    opacity: 1;               /* Tam görünür */
-    padding-bottom: 1rem;     /* Alt boşluk ekle */
-    margin-top: 1rem;         /* Üst boşluk ekle */
+    max-height: 500px;
+    opacity: 1;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
   }
 
   .nav-links a {
     display: block;
     padding: 10px 0;
     font-size: 1.1rem;
-    /* Linkler de hafifçe gecikmeli gelsin istersen: */
-    transition: color 0.3s; 
   }
-}
+
+/* Mobilde Lightbox Okları */
+  .prev-btn, .next-btn { 
+    padding: 15px; 
+    font-size: 35px; /* Mobilde de büyüttük (Eski: 20px) */
+  }
 }

@@ -3,70 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hermes – Furkan Yıldız</title> <link rel="stylesheet" href="../css/style.css">
-  
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data:;">
+  <title>Hermes – Furkan Yıldız</title>
+  <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" href="img/icon.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+  
+  <header>
+    <nav>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="../index.html#home">Ana Sayfa</a>
+        <a href="../index.html#projects">Projeler</a>
+        <a href="../index.html#about">Hakkımda</a>
+        <a href="../index.html#contact">İletişim</a>
+      </div>
+    </nav>
+  </header>
 
-</header>
-  <nav>
-    <div class="menu-toggle" id="mobile-menu">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-
-    <div class="nav-links" id="nav-links">
-      <a href="../index.html#home">Ana Sayfa</a>
-      <a href="../index.html#projects">Projeler</a>
-      <a href="../index.html#about">Hakkımda</a>
-      <a href="../index.html#contact">İletişim</a>
-    </div>
-  </nav>
-</header>
-
-  <section>
+  <section class="game-detail">
     <div class="container">
-      <h2 class="mb-3"><span>Hermes</span></h2> <p class="mb-3">Unreal Engine ile geliştirdiğimiz aksiyon ve macera oyunu.</p>
+      
+      <h1 class="game-title">Hermes</h1>
+      <p class="game-subtitle">Unreal Engine ile Geliştirilmiş Aksiyon & Macera Oyunu</p>
+
+      <div class="game-media mb-3">
+        <img src="../img/game5.png" alt="Hermes Ana Görsel" class="main-image">
+      </div>
 
       <div class="row">
         
         <div class="col-8">
+          <h3>Oyun Hakkında</h3>
           <p>
-            Hermes, mitolojik öğelerle bezeli hızlı tempolu bir aksiyon oyunudur. 
-            Oyuncu, tanrıların habercisi olarak engelleri aşmalı ve mesajı yerine ulaştırmalıdır.
-            (Burayı oyunun gerçek hikayesine göre düzenle).
+            Hermes, mitolojik bir evrende geçen, hız ve refleks odaklı bir platform oyunudur. 
+            Oyuncu, Tanrıların habercisi Hermes rolünü üstlenerek, Olimpos'a ulaşması gereken 
+            acil bir mesajı, yeraltı dünyasının tuzaklarına takılmadan iletmelidir.
           </p>
-
-          <p>
-            Projedeki rolüm: Game Designer & Level Designer. Bölüm tasarımlarını ve
-            oyuncu hareket mekaniklerini (Movement mechanics) kurguladım.
-          </p>
-
-          <ul>
-            <li>Motor: Unreal Engine</li>
-            <li>Tür: Action, Platformer</li>
-            <li>Platform: PC (Windows)</li>
+          
+          <h3 class="mt-3">Neler Yaptım? (My Contribution)</h3>
+          <p>Bu projede <strong>Lead Game Designer</strong> ve <strong>Gameplay Programmer</strong> olarak çalıştım. Başlıca katkılarım:</p>
+          <ul class="role-list">
+            <li><strong>Mekanik Tasarımı:</strong> Karakterin "Dash" ve "Wall Run" mekaniklerini Unreal Blueprint sistemi ile sıfırdan kurguladım.</li>
+            <li><strong>Level Design:</strong> Oyunun ilk 3 bölümünün graybox aşamasından final ışıklandırmasına kadar tasarımını yaptım.</li>
+            <li><strong>AI (Yapay Zeka):</strong> Düşmanların devriye gezme (Patrol) sistemini Behavior Tree kullanarak kodladım.</li>
+            <li><strong>UI/UX:</strong> Can barı ve yetenek bekleme sürelerini gösteren arayüzü entegre ettim.</li>
           </ul>
-        </div>
-        
-        <div class="col-4">
-          <div class="card">
-            <img src="../img/game5.png" alt="Hermes oyun görseli">
-            <p class="mt-1">Oyun içi ekran görüntüsü.</p>
+
+          <div class="game-buttons mt-3">
+            <a href="#" class="btn btn-primary"><i class="fa-brands fa-itch-io"></i> Oyunu İndir (Itch.io)</a>
+            <a href="#" class="btn btn-outline"><i class="fa-brands fa-github"></i> Kaynak Kodlar</a>
           </div>
         </div>
-      
-      </div> <div class="mt-3" style="text-align: center;">
-        <a href="../index.html#projects" class="btn btn-primary">
-          <i class="fa-solid fa-arrow-left"></i> Projelere Geri Dön
-        </a>
+
+        <div class="col-4">
+          <div class="tech-box">
+            <h4>Proje Bilgileri</h4>
+            <ul>
+              <li><i class="fa-solid fa-gamepad"></i> <strong>Tür:</strong> Action, Platformer</li>
+              <li><i class="fa-solid fa-microchip"></i> <strong>Motor:</strong> Unreal Engine 5.1</li>
+              <li><i class="fa-solid fa-code"></i> <strong>Dil:</strong> Blueprint & C++</li>
+              <li><i class="fa-solid fa-calendar"></i> <strong>Süre:</strong> 3 Ay (Game Jam)</li>
+              <li><i class="fa-solid fa-users"></i> <strong>Takım:</strong> 2 Yazılımcı, 1 Artist</li>
+              <li><i class="fa-solid fa-desktop"></i> <strong>Platform:</strong> PC (Windows)</li>
+            </ul>
+          </div>
+        </div>
+
+      </div> <h3 class="mt-3 text-center">Oyun İçi Görseller</h3>
+      <div class="gallery-grid mt-2">
+        <img src="../img/game1.png" alt="Ekran Görüntüsü 1">
+        <img src="../img/game2.png" alt="Ekran Görüntüsü 2">
+        <img src="../img/game3.png" alt="Ekran Görüntüsü 3">
       </div>
 
-    </div> </section>
+      <div class="mt-3 text-center">
+        <a href="../index.html#projects" class="btn btn-primary">
+         <i class="fa-solid fa-arrow-left"></i> Projelere Geri Dön
+</a>
+      </div>
+
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Furkan Yıldız</p>
   </footer>
-<script src="../js/script.js"></script>
+
+  <div id="lightbox" class="lightbox">
+  <span class="close-btn" id="lightbox-close">&times;</span>
+  <span class="prev-btn" id="lightbox-prev">&#10094;</span>
+  <span class="next-btn" id="lightbox-next">&#10095;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+
+  <script src="../js/script.js"></script>
 </body>
 </html>
