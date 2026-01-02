@@ -510,4 +510,61 @@ footer {
     padding: 15px; 
     font-size: 35px; /* Mobilde de büyüttük (Eski: 20px) */
   }
+
+  /* -------------------------------------- */
+/* 3D MODEL VİEWER STİLLERİ             */
+/* -------------------------------------- */
+
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.model-card {
+    background: rgba(255, 255, 255, 0.05); /* Hafif şeffaf kutu */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.model-card:hover {
+    border-color: #a855f7; /* Hover olunca mor çerçeve */
+    transform: translateY(-5px);
+}
+
+/* Google Model Viewer Bileşeni */
+model-viewer {
+    width: 100%;
+    height: 350px; /* Model penceresinin yüksekliği */
+    background-color: #1e1e2e; /* Modelin arkasındaki renk */
+    --poster-color: transparent;
+}
+
+.model-info {
+    padding: 15px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.model-info h4 {
+    margin: 0;
+    color: #a855f7;
+    font-size: 1.2rem;
+}
+
+.model-info p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 3rem 0;
+}
 }

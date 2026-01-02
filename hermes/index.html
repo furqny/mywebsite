@@ -3,36 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data:;">
   <title>Hermes – Furkan Yıldız</title>
+  
   <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/png" href="../img/icon.png">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   
   <header>
-  <nav>
-    <div class="menu-toggle" id="mobile-menu">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-    <div class="nav-links" id="nav-links">
-      
-      <a href="../">Ana Sayfa</a>
-
-      <a href="../#projects">Projeler</a>
-      <a href="../#about">Hakkımda</a>
-      <a href="../#contact">İletişim</a>
-    </div>
-  </nav>
-</nav>
+    <nav>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="/">Ana Sayfa</a>
+        <a href="/#projects">Projeler</a>
+        <a href="/#about">Hakkımda</a>
+        <a href="/#contact">İletişim</a>
+      </div>
+    </nav>
   </header>
 
   <section class="game-detail">
     <div class="container">
       
       <h1 class="game-title">Hermes</h1>
-      <p class="game-subtitle">Unreal Engine ile Geliştirilmiş Aksiyon & Macera Oyunu</p>
+      <p class="game-subtitle">Unreal Engine 5 ile Geliştirilen Açık Dünya Macera Oyunu</p>
+      
+      <div style="text-align: center; margin-bottom: 20px;">
+        <span style="background: #f59e0b; color: #000; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem;">
+          <i class="fa-solid fa-person-digging"></i> Geliştirme Aşamasında (Work in Progress)
+        </span>
+      </div>
 
       <div class="game-media mb-3">
         <img src="../img/game5.png" alt="Hermes Ana Görsel" class="main-image">
@@ -43,51 +46,72 @@
         <div class="col-8">
           <h3>Oyun Hakkında</h3>
           <p>
-            Hermes, mitolojik bir evrende geçen, hız ve refleks odaklı bir platform oyunudur. 
-            Oyuncu, Tanrıların habercisi Hermes rolünü üstlenerek, Olimpos'a ulaşması gereken 
-            acil bir mesajı, yeraltı dünyasının tuzaklarına takılmadan iletmelidir.
+            Mitolojinin ünlü kargocusu Hermes'in henüz bir "Çaylak" olduğu dönemleri konu alan, mizahi tonu yüksek bir açık dünya macera oyunudur. 
+            Zeus, efsanevi Pandora'nın Kutusu'nu Hermes'e emanet eder ve onu Pandora'ya ulaştırmasını emreder.
+          </p>
+          <p class="mt-1">
+            Henüz tam bir Tanrı olarak kabul görmeyen Hermes için bu, kendini Olimpos'a kanıtlama şansıdır. 
+            Oyun, Disney ve Herkül animasyonlarından ilham alan "Hand-Painted" (El Çizimi) görsel stiliyle, 
+            oyuncuyu canlı bir mitolojik dünyaya davet eder. Oyuncu, köylülerle (NPC) diyaloğa girerek Pandora'nın Tapınağı'nı
+            bulmaya çalışırken, bir yandan da açık dünyadaki engelleri aşmalıdır.
           </p>
           
-          <h3 class="mt-3">Neler Yaptım? (My Contribution)</h3>
-          <p>Bu projede <strong>Lead Game Designer</strong> ve <strong>Gameplay Programmer</strong> olarak çalıştım. Başlıca katkılarım:</p>
+          <h3 class="mt-3">Neler Yaptım? </h3>
+          <p>
+            Team Nyx ekibiyle geliştirdiğimiz bu projede <strong>Game Designer</strong> ve <strong>Main Programmer</strong>  
+            olarak görev alıyorum. Proje şu an 2. ayında olup geliştirmesi devam etmektedir. Şu ana kadarki katkılarım:
+          </p>
           <ul class="role-list">
-            <li><strong>Mekanik Tasarımı:</strong> Karakterin "Dash" ve "Wall Run" mekaniklerini Unreal Blueprint sistemi ile sıfırdan kurguladım.</li>
-            <li><strong>Level Design:</strong> Oyunun ilk 3 bölümünün graybox aşamasından final ışıklandırmasına kadar tasarımını yaptım.</li>
-            <li><strong>AI (Yapay Zeka):</strong> Düşmanların devriye gezme (Patrol) sistemini Behavior Tree kullanarak kodladım.</li>
-            <li><strong>UI/UX:</strong> Can barı ve yetenek bekleme sürelerini gösteren arayüzü entegre ettim.</li>
+            <li><strong>Core Gameplay Mechanics:</strong> Karakterin hareket (Walk, Run, Jump) mekaniklerini Blueprint ile kodladım.</li>
+            <li><strong>Dialogue & Quest System:</strong> NPC'lerle etkileşime girilmesini sağlayan detaylı diyalog sistemini ve görev akış mantığını kurdum.</li>
+            <li><strong>Inventory System:</strong> Oyuncunun eşya toplayıp yönetebildiği envanter sisteminin altyapısını hazırladım.</li>
+            <li><strong>Cinematic Logic:</strong> Oyun içi ara sahnelerin tetiklenme ve oynatılma kodlarını yazdım.</li>
+            <li><strong>UI/UX Programming:</strong> Ana menü ve oyun içi arayüzlerin kod tarafındaki fonksiyonlarını entegre ettim.</li>
           </ul>
 
           <div class="game-buttons mt-3">
-            <a href="#" class="btn btn-primary"><i class="fa-brands fa-itch-io"></i> Oyunu İndir (Itch.io)</a>
-            <a href="#" class="btn btn-outline"><i class="fa-brands fa-github"></i> Kaynak Kodlar</a>
-          </div>
+            <a href="https://github.com/kullaniciadin/Hermes-Project" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-github"></i> Geliştirme Sürecini İncele
+            </a>
+            </div>
         </div>
 
         <div class="col-4">
           <div class="tech-box">
             <h4>Proje Bilgileri</h4>
             <ul>
-              <li><i class="fa-solid fa-gamepad"></i> <strong>Tür:</strong> Action, Platformer</li>
-              <li><i class="fa-solid fa-microchip"></i> <strong>Motor:</strong> Unreal Engine 5.1</li>
-              <li><i class="fa-solid fa-code"></i> <strong>Dil:</strong> Blueprint & C++</li>
-              <li><i class="fa-solid fa-calendar"></i> <strong>Süre:</strong> 3 Ay (Game Jam)</li>
-              <li><i class="fa-solid fa-users"></i> <strong>Takım:</strong> 2 Yazılımcı, 1 Artist</li>
+              <li><i class="fa-solid fa-gamepad"></i> <strong>Tür:</strong> Open World, Adventure, RPG</li>
+              <li><i class="fa-solid fa-microchip"></i> <strong>Motor:</strong> Unreal Engine 5.6.1 </li>
+              <li><i class="fa-solid fa-code"></i> <strong>Dil:</strong> Blueprint Visual Scripting</li>
+              <li><i class="fa-solid fa-calendar"></i> <strong>Süre:</strong> Devam Ediyor (2. Ay)</li>
+              <li><i class="fa-solid fa-users"></i> <strong>Takım:</strong> 5 Kişi</li>
               <li><i class="fa-solid fa-desktop"></i> <strong>Platform:</strong> PC (Windows)</li>
             </ul>
           </div>
+          
+          <div class="tech-box mt-2">
+            <h4>Kullanılan Araçlar</h4>
+            <ul style="font-size: 0.9rem;">
+              <li>• Unreal Engine 5 (Core)</li>
+              <li>• Blender (3D Art) </li>
+              <li>• Substance Painter (Texture) </li>
+              <li>• GitHub (Versiyon Kontrol) </li>
+            </ul>
+          </div>
+
         </div>
 
-      </div> <h3 class="mt-3 text-center">Oyun İçi Görseller</h3>
+      </div> <h3 class="mt-3 text-center">Geliştirme Aşamasından Görüntüler</h3>
       <div class="gallery-grid mt-2">
-        <img src="../img/game1.png" alt="Ekran Görüntüsü 1">
-        <img src="../img/game2.png" alt="Ekran Görüntüsü 2">
-        <img src="../img/game3.png" alt="Ekran Görüntüsü 3">
+        <img src="../img/game5.png" alt="Hermes Köy Tasarımı">
+        <img src="../img/game5.png" alt="Hermes Diyalog Sistemi">
+        <img src="../img/game5.png" alt="Hermes Envanter Arayüzü">
       </div>
 
       <div class="mt-3 text-center">
         <a href="/#projects" class="btn btn-primary">
-         <i class="fa-solid fa-arrow-left"></i> Projelere Geri Dön
-</a>
+          <i class="fa-solid fa-arrow-left"></i> Projelere Geri Dön
+        </a>
       </div>
 
     </div>
@@ -98,11 +122,11 @@
   </footer>
 
   <div id="lightbox" class="lightbox">
-  <span class="close-btn" id="lightbox-close">&times;</span>
-  <span class="prev-btn" id="lightbox-prev">&#10094;</span>
-  <span class="next-btn" id="lightbox-next">&#10095;</span>
-  <img class="lightbox-content" id="lightbox-img">
-</div>
+    <span class="close-btn" id="lightbox-close">&times;</span>
+    <span class="prev-btn" id="lightbox-prev">&#10094;</span>
+    <span class="next-btn" id="lightbox-next">&#10095;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
 
   <script src="../js/script.js"></script>
 </body>

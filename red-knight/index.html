@@ -3,38 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data:;">
-  <title>Hermes – Furkan Yıldız</title>
+  <title>Red Knight – Furkan Yıldız</title>
+  
   <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" type="image/png" href="../img/icon.png">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   
   <header>
-<nav>
-  <div class="menu-toggle" id="mobile-menu">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-  <div class="nav-links" id="nav-links">
-    
-    <a href="../">Ana Sayfa</a>
-
-    <a href="../#projects">Projeler</a>
-    <a href="../#about">Hakkımda</a>
-    <a href="../#contact">İletişim</a>
-  </div>
-</nav>
+    <nav>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="/">Ana Sayfa</a>
+        <a href="/#projects">Projeler</a>
+        <a href="/#about">Hakkımda</a>
+        <a href="/#contact">İletişim</a>
+      </div>
+    </nav>
   </header>
 
   <section class="game-detail">
     <div class="container">
       
-      <h1 class="game-title">Hermes</h1>
-      <p class="game-subtitle">Unreal Engine ile Geliştirilmiş Aksiyon & Macera Oyunu</p>
+      <h1 class="game-title">Red Knight</h1>
+      <p class="game-subtitle">48 Saatte Geliştirilen Game Jam Projesi ("Işığı Kullan" Teması)</p>
 
       <div class="game-media mb-3">
-        <img src="../img/game5.png" alt="Hermes Ana Görsel" class="main-image">
+        <img src="../img/game3.png" alt="Red Knight Ana Görsel" class="main-image">
       </div>
 
       <div class="row">
@@ -42,51 +40,72 @@
         <div class="col-8">
           <h3>Oyun Hakkında</h3>
           <p>
-            Hermes, mitolojik bir evrende geçen, hız ve refleks odaklı bir platform oyunudur. 
-            Oyuncu, Tanrıların habercisi Hermes rolünü üstlenerek, Olimpos'a ulaşması gereken 
-            acil bir mesajı, yeraltı dünyasının tuzaklarına takılmadan iletmelidir.
+            Red Knight, "Işığı Kullan" temalı bir Game Jam kapsamında, 4 kişilik bir ekiple <strong>sadece 48 saatte</strong> 
+            sıfırdan geliştirilmiş 2D Top-Down bir hayatta kalma oyunudur. Oyuncu, karanlık bir tapınakta engelleri aşarak 
+            ilerlemeye çalışan bir şövalyeyi kontrol eder.
+          </p>
+          <p class="mt-1">
+            Oyunun temel mekaniği "Rastgele Işıklar" üzerine kuruludur. Kare şeklindeki odada ışıklar belirli aralıklarla söner 
+            ve karanlıkta farklı renklerde ışık huzmeleri hareket etmeye başlar. Oyuncunun amacı, bu kaotik ortamda 
+            1 dakika boyunca hayatta kalmaktır.
           </p>
           
-          <h3 class="mt-3">Neler Yaptım? (My Contribution)</h3>
-          <p>Bu projede <strong>Lead Game Designer</strong> ve <strong>Gameplay Programmer</strong> olarak çalıştım. Başlıca katkılarım:</p>
+          <h3 class="mt-3">Neler Yaptım?</h3>
+          <p>
+            Bu projede <strong>Game Designer</strong> ve <strong>Gameplay Programmer</strong> rollerini üstlendim. 
+            Oyunun temel fikrini bulan kişi olarak, kısıtlı sürede mekanikleri koda döktüm. Başlıca katkılarım:
+          </p>
           <ul class="role-list">
-            <li><strong>Mekanik Tasarımı:</strong> Karakterin "Dash" ve "Wall Run" mekaniklerini Unreal Blueprint sistemi ile sıfırdan kurguladım.</li>
-            <li><strong>Level Design:</strong> Oyunun ilk 3 bölümünün graybox aşamasından final ışıklandırmasına kadar tasarımını yaptım.</li>
-            <li><strong>AI (Yapay Zeka):</strong> Düşmanların devriye gezme (Patrol) sistemini Behavior Tree kullanarak kodladım.</li>
-            <li><strong>UI/UX:</strong> Can barı ve yetenek bekleme sürelerini gösteren arayüzü entegre ettim.</li>
+            <li><strong>Game Design:</strong> "Işığı Kullan" temasını, ışıkların oyuncuya dost veya düşman olduğu bir hayatta kalma mekaniğine dönüştürdüm.</li>
+            <li><strong>Buff/Debuff Sistemi:</strong> Farklı renkteki ışıkların (Yeşil: +Can, Kırmızı: Yüksek Hasar, Mavi: Dondurma vb.) çarpışma mantığını ve etkilerini kodladım.</li>
+            <li><strong>RNG (Random Number Generator):</strong> Sarı ışığın %50 ihtimalle can vermesi veya alması gibi risk/ödül mekaniklerini kurguladım.</li>
+            <li><strong>Level Design:</strong> İlk bölümde temel renklerle başlayıp, ilerledikçe Mavi (Dondurma) ve Sarı (Şans) ışıkların eklendiği zorluk eğrisini tasarladım.</li>
           </ul>
 
           <div class="game-buttons mt-3">
-            <a href="#" class="btn btn-primary"><i class="fa-brands fa-itch-io"></i> Oyunu İndir (Itch.io)</a>
-            <a href="#" class="btn btn-outline"><i class="fa-brands fa-github"></i> Kaynak Kodlar</a>
-          </div>
+            <a href="https://github.com/kullaniciadin/Red-Knight" target="_blank" class="btn btn-primary">
+              <i class="fa-brands fa-github"></i> Kaynak Kodları İncele
+            </a>
+            </div>
         </div>
 
         <div class="col-4">
           <div class="tech-box">
             <h4>Proje Bilgileri</h4>
             <ul>
-              <li><i class="fa-solid fa-gamepad"></i> <strong>Tür:</strong> Action, Platformer</li>
-              <li><i class="fa-solid fa-microchip"></i> <strong>Motor:</strong> Unreal Engine 5.1</li>
-              <li><i class="fa-solid fa-code"></i> <strong>Dil:</strong> Blueprint & C++</li>
-              <li><i class="fa-solid fa-calendar"></i> <strong>Süre:</strong> 3 Ay (Game Jam)</li>
-              <li><i class="fa-solid fa-users"></i> <strong>Takım:</strong> 2 Yazılımcı, 1 Artist</li>
+              <li><i class="fa-solid fa-gamepad"></i> <strong>Tür:</strong> Arcade, Survival</li>
+              <li><i class="fa-solid fa-microchip"></i> <strong>Motor:</strong> Unity</li>
+              <li><i class="fa-solid fa-code"></i> <strong>Dil:</strong> C#</li>
+              <li><i class="fa-solid fa-stopwatch"></i> <strong>Süre:</strong> 48 Saat (Game Jam)</li>
+              <li><i class="fa-solid fa-users"></i> <strong>Takım:</strong> 4 Kişi</li>
               <li><i class="fa-solid fa-desktop"></i> <strong>Platform:</strong> PC (Windows)</li>
             </ul>
           </div>
+          
+          <div class="tech-box mt-2">
+            <h4>Işık Mekanikleri</h4>
+            <ul style="font-size: 0.9rem;">
+              <li style="color: #4ade80;">• <strong>Yeşil:</strong> +5 Can</li>
+              <li style="color: #ef4444;">• <strong>Kırmızı:</strong> -20 Can</li>
+              <li style="color: #e5e7eb;">• <strong>Beyaz:</strong> -10 Can </li>
+              <li style="color: #facc15;">• <strong>Sarı:</strong> %50 Şans (+10 / -10)</li>
+              <li style="color: #3b82f6;">• <strong>Mavi:</strong> 3sn Dondurma (Stun)</li>
+            </ul>
+          </div>
+
         </div>
 
       </div> <h3 class="mt-3 text-center">Oyun İçi Görseller</h3>
       <div class="gallery-grid mt-2">
-        <img src="../img/game1.png" alt="Ekran Görüntüsü 1">
-        <img src="../img/game2.png" alt="Ekran Görüntüsü 2">
-        <img src="../img/game3.png" alt="Ekran Görüntüsü 3">
+        <img src="../img/game3.png" alt="Red Knight Işıklar Kapalıyken">
+        <img src="../img/game3.png" alt="Red Knight Mavi Işık Etkisi">
+        <img src="../img/game3.png" alt="Red Knight Oynanış">
       </div>
 
       <div class="mt-3 text-center">
         <a href="/#projects" class="btn btn-primary">
-         <i class="fa-solid fa-arrow-left"></i> Projelere Geri Dön
-</a>
+          <i class="fa-solid fa-arrow-left"></i> Projelere Geri Dön
+        </a>
       </div>
 
     </div>
@@ -97,11 +116,11 @@
   </footer>
 
   <div id="lightbox" class="lightbox">
-  <span class="close-btn" id="lightbox-close">&times;</span>
-  <span class="prev-btn" id="lightbox-prev">&#10094;</span>
-  <span class="next-btn" id="lightbox-next">&#10095;</span>
-  <img class="lightbox-content" id="lightbox-img">
-</div>
+    <span class="close-btn" id="lightbox-close">&times;</span>
+    <span class="prev-btn" id="lightbox-prev">&#10094;</span>
+    <span class="next-btn" id="lightbox-next">&#10095;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
 
   <script src="../js/script.js"></script>
 </body>
