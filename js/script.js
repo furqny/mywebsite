@@ -107,30 +107,36 @@ if (lightbox) {
 /* 3. GÜVENLİK VE KORUMA KODLARI        */
 /* -------------------------------------- */
 
-// NOT: Sağ tık engeli kaldırıldı. Kullanıcılar sağ tıklayıp resmi indirebilir.
-
 // 1. Resimlerin Sürüklenmesini Engelle (Drag & Drop)
-// Bu kod, resmin tutulup masaüstüne veya başka sekmeye sürüklenmesini önler.
 document.addEventListener('dragstart', function(e) {
     if (e.target.nodeName === 'IMG') {
         e.preventDefault();
     }
 }, false);
 
-// 2. F12 ve Geliştirici Araçlarını (Kısayolları) Zorlaştırma
-// İncele (Inspect) yapılmasını zorlaştırmak için kısayolları kapatıyoruz.
+// 2. Klavye Kısayollarını Engelle (F12, CTRL+U, CTRL+S)
 document.addEventListener('keydown', function(e) {
-    // F12 Tuşu
+    
+    // F12 Tuşu (Geliştirici Araçları)
     if (e.key === 'F12') {
         e.preventDefault();
     }
-    // CTRL+U (Kaynak Görüntüle)
+
+    // CTRL + U (Kaynak Görüntüle)
     if (e.ctrlKey && e.key === 'u') {
         e.preventDefault();
     }
-    // CTRL+SHIFT+I (Inspect Element)
+
+    // CTRL + SHIFT + I (İncele / Inspect)
     if (e.ctrlKey && e.shiftKey && e.key === 'i') {
         e.preventDefault();
+    }
+
+    // YENİ EKLENEN: CTRL + S (Sayfayı Kaydet)
+    // Mac kullanıcıları için (e.metaKey) komut tuşunu da kontrol ediyoruz.
+    if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S')) {
+        e.preventDefault(); // Kaydetme penceresini açma
+        // İstersen buraya console.log("Kaydetme engellendi"); yazabilirsin.
     }
 });
 }
