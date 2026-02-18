@@ -17,11 +17,20 @@
         <i class="fa-solid fa-bars"></i>
       </div>
       <div class="nav-links" id="nav-links">
-        <a href="/">Ana Sayfa</a>
-        <a href="/#projects">Projeler</a>
-        <a href="/#about">Hakkımda</a>
-        <a href="/#contact">İletişim</a>
+        <a href="/" class="lang-text" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
+        <a href="/#projects" class="lang-text" data-tr="Projeler" data-en="Projects">Projeler</a>
+        <a href="/#about" class="lang-text" data-tr="Hakkımda" data-en="About Me">Hakkımda</a>
+        <a href="/#contact" class="lang-text" data-tr="İletişim" data-en="Contact">İletişim</a>
       </div>
+
+      <a href="/#contact" class="lang-text" data-tr="İletişim" data-en="Contact">İletişim</a>
+
+      <div class="lang-switch">
+        <span id="btn-en" onclick="changeLang('en')">EN</span>
+        <span class="separator">|</span>
+        <span id="btn-tr" onclick="changeLang('tr')">TR</span>
+      </div>
+        
     </nav>
   </header>
 
@@ -29,7 +38,11 @@
     <div class="container">
       
       <h1 class="game-title">Hallowed Decay</h1>
-      <p class="game-subtitle">Unreal Engine ile Geliştirilen Psikolojik Korku & Bulmaca Oyunu</p>
+      <p class="game-subtitle lang-text" 
+         data-tr="Unreal Engine ile Geliştirilen Psikolojik Korku & Bulmaca Oyunu" 
+         data-en="Psychological Horror & Puzzle Game Developed with Unreal Engine">
+        Unreal Engine ile Geliştirilen Psikolojik Korku & Bulmaca Oyunu
+      </p>
 
       <div class="game-media mb-3">
         <img src="../img/halloweddecaybg.png" alt="Hallowed Decay Ana Görsel" class="main-image">
@@ -38,63 +51,71 @@
       <div class="row">
         
         <div class="col-8">
-          <h3>Oyun Hakkında</h3>
-          <p>
+          <h3 class="lang-text" data-tr="Oyun Hakkında" data-en="About the Game">Oyun Hakkında</h3>
+          <p class="lang-text" 
+             data-tr="Hallowed Decay, Yıpranma/Çürüme teması üzerine kurulu, anlatı odaklı birinci şahıs bir psikolojik korku oyunudur. Hikayemiz, günahkar bir geçmişe sahip olan Blake'in, bir iyilik yapmaya çalışırken bıçaklanıp kendini terk edilmiş, gotik bir kilisede bulmasıyla başlar. Ancak burası sıradan bir kilise değildir; zamanın ve gerçekliğin büküldüğü bir hapishanedir." 
+             data-en="Hallowed Decay is a narrative-driven, first-person psychological horror game built on the theme of Wear/Decay. Our story begins when Blake, a man with a sinful past, is stabbed while trying to do a good deed and finds himself in an abandoned, gothic church. However, this is no ordinary church; it is a prison where time and reality are warped.">
             Hallowed Decay, Yıpranma/Çürüme teması üzerine kurulu, anlatı odaklı birinci şahıs bir psikolojik korku oyunudur. 
             Hikayemiz, günahkar bir geçmişe sahip olan Blake'in, bir iyilik yapmaya çalışırken bıçaklanıp kendini terk edilmiş, gotik bir kilisede bulmasıyla başlar. 
             Ancak burası sıradan bir kilise değildir; zamanın ve gerçekliğin büküldüğü bir hapishanedir.
           </p>
-          <p class="mt-1">
+          <p class="mt-1 lang-text" 
+             data-tr="Görsel stil olarak 3D ortamlar ile çizgi roman tarzı vektör çizimlerin (Comic-style) harmanlandığı hibrit bir sanat dili kullanılmıştır. Oyuncu, kilisenin karanlık koridorlarında bulmacaları çözerek ve geçmişiyle yüzleşerek bu lanetli yerden kaçmaya çalışır." 
+             data-en="As for the visual style, a hybrid art language was used, blending 3D environments with comic-style vector drawings. The player tries to escape this cursed place by solving puzzles in the dark corridors of the church and facing their past.">
             Görsel stil olarak 3D ortamlar ile çizgi roman tarzı vektör çizimlerin (Comic-style) harmanlandığı hibrit bir sanat dili kullanılmıştır. 
             Oyuncu, kilisenin karanlık koridorlarında bulmacaları çözerek ve geçmişiyle yüzleşerek bu lanetli yerden kaçmaya çalışır.
           </p>
           
-          <h3 class="mt-3">Neler Yaptım?</h3>
-          <p>
+          <h3 class="mt-3 lang-text" data-tr="Neler Yaptım?" data-en="What Did I Do? (My Role)">Neler Yaptım?</h3>
+          <p class="lang-text" 
+             data-tr="Bu projede <strong>Gameplay Programmer</strong>, <strong>Level Designer</strong> ve <strong>Game Designer</strong> olarak görev aldım. Özellikle temanın mekaniğe dönüştürülmesi ve teknik altyapının Unreal Engine üzerinde kurulmasında aktif rol oynadım. Başlıca katkılarım:" 
+             data-en="In this project, I took on the roles of <strong>Gameplay Programmer</strong>, <strong>Level Designer</strong>, and <strong>Game Designer</strong>. I played an active role especially in transforming the theme into mechanics and establishing the technical infrastructure on Unreal Engine. My main contributions:">
             Bu projede <strong>Gameplay Programmer</strong>, <strong>Level Designer</strong> ve <strong>Game Designer</strong> olarak görev aldım. 
             Özellikle temanın mekaniğe dönüştürülmesi ve teknik altyapının Unreal Engine üzerinde kurulmasında aktif rol oynadım. Başlıca katkılarım:
           </p>
           <ul class="role-list">
-            <li><strong>"Aging" (Yaşlanma) Mekaniği:</strong> "Çürüme" temasını zamanla ilişkilendirdim. Oyuncu canavara her yakalandığında zindana atılıyor ve kurtulana kadar yıllar geçiyor. Bu süreçte karakter fiziksel olarak yaşlanıyor ve hareket kabiliyeti (Hız, Stamina) "çürüyor".</li>
-            <li><strong>Blueprint Scripting:</strong> Oyunun tüm temel mekaniklerini (Karakter hareketi, Etkileşim sistemi, Fener kullanımı) Unreal Blueprint sistemi ile kodladım.</li>
-            <li><strong>Level Design & Atmosphere:</strong> Gotik kilise atmosferini destekleyen bölüm tasarımlarını ve oyuncuyu yönlendiren ışıklandırma kurgularını yaptım.</li>
-            <li><strong>Puzzle Logic:</strong> Kapı-Anahtar sistemleri ve sembol eşleştirme gibi mantıksal bulmacaların algoritmalarını hazırladım.</li>
+            <li><strong>&quot;Aging&quot; (Yaşlanma) Mekaniği:</strong> <span class="lang-text" data-tr="&quot;Çürüme&quot; temasını zamanla ilişkilendirdim. Oyuncu canavara her yakalandığında zindana atılıyor ve kurtulana kadar yıllar geçiyor. Bu süreçte karakter fiziksel olarak yaşlanıyor ve hareket kabiliyeti (Hız, Stamina) &quot;çürüyor&quot;." data-en="I associated the &quot;Decay&quot; theme with time. Every time the player is caught by the monster, they are thrown into a dungeon, and years pass before they can escape. During this process, the character physically ages, and their mobility (Speed, Stamina) &quot;decays&quot;.">"Çürüme" temasını zamanla ilişkilendirdim. Oyuncu canavara her yakalandığında zindana atılıyor ve kurtulana kadar yıllar geçiyor. Bu süreçte karakter fiziksel olarak yaşlanıyor ve hareket kabiliyeti (Hız, Stamina) "çürüyor".</span></li>
+            <li><strong>Blueprint Scripting:</strong> <span class="lang-text" data-tr="Oyunun tüm temel mekaniklerini (Karakter hareketi, Etkileşim sistemi, Fener kullanımı) Unreal Blueprint sistemi ile kodladım." data-en="I coded all the core mechanics of the game (Character movement, Interaction system, Flashlight usage) using the Unreal Blueprint system.">Oyunun tüm temel mekaniklerini (Karakter hareketi, Etkileşim sistemi, Fener kullanımı) Unreal Blueprint sistemi ile kodladım.</span></li>
+            <li><strong>Level Design & Atmosphere:</strong> <span class="lang-text" data-tr="Gotik kilise atmosferini destekleyen bölüm tasarımlarını ve oyuncuyu yönlendiren ışıklandırma kurgularını yaptım." data-en="I created level designs that support the gothic church atmosphere and lighting setups that guide the player.">Gotik kilise atmosferini destekleyen bölüm tasarımlarını ve oyuncuyu yönlendiren ışıklandırma kurgularını yaptım.</span></li>
+            <li><strong>Puzzle Logic:</strong> <span class="lang-text" data-tr="Kapı-Anahtar sistemleri ve sembol eşleştirme gibi mantıksal bulmacaların algoritmalarını hazırladım." data-en="I prepared the algorithms for logical puzzles such as Door-Key systems and symbol matching.">Kapı-Anahtar sistemleri ve sembol eşleştirme gibi mantıksal bulmacaların algoritmalarını hazırladım.</span></li>
           </ul>
 
           <div class="game-buttons mt-3">
-            <a href="https://github.com/kullaniciadin/Hallowed-Decay" target="_blank" class="btn btn-primary">
+            <a href="https://github.com/kullaniciadin/Hallowed-Decay" target="_blank" class="btn btn-primary lang-text" data-tr="Kaynak Kodları İncele" data-en="View Source Code">
               <i class="fa-brands fa-github"></i> Kaynak Kodları İncele
             </a>
-            </div>
+          </div>
         </div>
 
         <div class="col-4">
           <div class="tech-box">
-            <h4>Proje Bilgileri</h4>
+            <h4 class="lang-text" data-tr="Proje Bilgileri" data-en="Project Details">Proje Bilgileri</h4>
             <ul>
-              <li><i class="fa-solid fa-gamepad"></i> <strong>Tür:</strong> Psychological Horror, Puzzle</li>
-              <li><i class="fa-solid fa-microchip"></i> <strong>Motor:</strong> Unreal Engine</li>
-              <li><i class="fa-solid fa-code"></i> <strong>Dil:</strong> Blueprint Visual Scripting</li>
-              <li><i class="fa-solid fa-calendar"></i> <strong>Süre:</strong> 2 Ay</li>
-              <li><i class="fa-solid fa-users"></i> <strong>Takım:</strong> 4 Kişi</li>
-              <li><i class="fa-solid fa-desktop"></i> <strong>Platform:</strong> PC (Windows)</li>
+              <li><i class="fa-solid fa-gamepad"></i> <span class="lang-text" data-tr="<strong>Tür:</strong> Psychological Horror, Puzzle" data-en="<strong>Genre:</strong> Psychological Horror, Puzzle"><strong>Tür:</strong> Psychological Horror, Puzzle</span></li>
+              <li><i class="fa-solid fa-microchip"></i> <span class="lang-text" data-tr="<strong>Motor:</strong> Unreal Engine" data-en="<strong>Engine:</strong> Unreal Engine"><strong>Motor:</strong> Unreal Engine</span></li>
+              <li><i class="fa-solid fa-code"></i> <span class="lang-text" data-tr="<strong>Dil:</strong> Blueprint Visual Scripting" data-en="<strong>Language:</strong> Blueprint Visual Scripting"><strong>Dil:</strong> Blueprint Visual Scripting</span></li>
+              <li><i class="fa-solid fa-calendar"></i> <span class="lang-text" data-tr="<strong>Süre:</strong> 2 Ay" data-en="<strong>Duration:</strong> 2 Months"><strong>Süre:</strong> 2 Ay</span></li>
+              <li><i class="fa-solid fa-users"></i> <span class="lang-text" data-tr="<strong>Takım:</strong> 4 Kişi" data-en="<strong>Team:</strong> 4 People"><strong>Takım:</strong> 4 Kişi</span></li>
+              <li><i class="fa-solid fa-desktop"></i> <span class="lang-text" data-tr="<strong>Platform:</strong> PC (Windows)" data-en="<strong>Platform:</strong> PC (Windows)"><strong>Platform:</strong> PC (Windows)</span></li>
             </ul>
           </div>
 
         </div>
 
-      </div> <h3 class="mt-3 text-center">Oyun İçi Görseller</h3>
+      </div> 
+      
+      <h3 class="mt-3 text-center lang-text" data-tr="Oyun İçi Görseller" data-en="In-Game Screenshots">Oyun İçi Görseller</h3>
       <div class="gallery-grid mt-2">
-        <img src="../img/halloweddecay (4).png" alt="Hallowed Decay Kilise Girişi">
-        <img src="../img/halloweddecay (1).png" alt="Hallowed Decay Kilise Girişi">
-        <img src="../img/halloweddecay (2).png" alt="Hallowed Decay Kilise Girişi">
-        <img src="../img/halloweddecay (3).png" alt="Hallowed Decay Kilise Girişi">
-        <img src="../img/halloweddecay (5).png" alt="Hallowed Decay Kilise Girişi">
-        <img src="../img/halloweddecay (6).png" alt="Hallowed Decay Kilise Girişi">
+        <img src="../img/halloweddecay (4).png" alt="Hallowed Decay Gameplay 1">
+        <img src="../img/halloweddecay (1).png" alt="Hallowed Decay Puzzle Area">
+        <img src="../img/halloweddecay (2).png" alt="Hallowed Decay Gothic Church">
+        <img src="../img/halloweddecay (3).png" alt="Hallowed Decay Dark Corridor">
+        <img src="../img/halloweddecay (5).png" alt="Hallowed Decay Monster Encounter">
+        <img src="../img/halloweddecay (6).png" alt="Hallowed Decay Dungeon Cell">
       </div>
 
       <div class="mt-3 text-center">
-        <a href="/#projects" class="btn btn-primary">
+        <a href="/#projects" class="btn btn-primary lang-text" data-tr="Projelere Geri Dön" data-en="Return to Projects">
           <i class="fa-solid fa-arrow-left"></i> Projelere Geri Dön
         </a>
       </div>

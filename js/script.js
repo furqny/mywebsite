@@ -48,7 +48,7 @@ if (lightbox) {
         }
     });
 
-    // 3. BUTON GİZLEME/GÖSTERME FONKSİYONU (YENİ)
+    // 3. BUTON GİZLEME/GÖSTERME FONKSİYONU
     function updateButtons() {
         // Eğer ilk resimdeysek (0. indeks), Geri butonunu gizle
         if (currentIndex === 0) {
@@ -102,6 +102,7 @@ if (lightbox) {
             showImage(currentIndex - 1);
         }
     });
+} // <-- EKSİK OLAN IF(LIGHTBOX) KAPANIŞI BURAYA GELDİ
 
 /* -------------------------------------- */
 /* 3. GÜVENLİK VE KORUMA KODLARI        */
@@ -132,11 +133,42 @@ document.addEventListener('keydown', function(e) {
         e.preventDefault();
     }
 
-    // YENİ EKLENEN: CTRL + S (Sayfayı Kaydet)
-    // Mac kullanıcıları için (e.metaKey) komut tuşunu da kontrol ediyoruz.
+    // CTRL + S (Sayfayı Kaydet)
     if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S')) {
-        e.preventDefault(); // Kaydetme penceresini açma
-        // İstersen buraya console.log("Kaydetme engellendi"); yazabilirsin.
+        e.preventDefault(); 
     }
 });
+
+
+/* -------------------------------------- */
+/* 4. ÇOKLU DİL SİSTEMİ (i18n)          */
+/* -------------------------------------- */
+
+function changeLang(lang) {
+    // 1. Seçilen dili tarayıcı hafızasına kaydet
+    localStorage.setItem('selectedLang', lang);
+
+    // 2. Butonların renklerini ayarla
+    document.getElementById('btn-en').classList.remove('active-lang');
+    document.getElementById('btn-tr').classList.remove('active-lang');
+    document.getElementById('btn-' + lang).classList.add('active-lang');
+
+    // 3. Sitedeki "lang-text" sınıfına sahip tüm yazıları bul ve değiştir
+    const elements = document.querySelectorAll('.lang-text');
+    elements.forEach(el => {
+        // data-en veya data-tr özelliğindeki yazıyı alıp HTML'e bas
+        if (el.getAttribute(`data-${lang}`)) {
+            el.innerHTML = el.getAttribute(`data-${lang}`);
+        }
+    });
 }
+
+// Sayfa yüklendiğinde hafızadaki dili kontrol et
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem('selectedLang') || 'en';
+    
+    // Eğer butonlar sayfada varsa dili değiştir
+    if(document.getElementById('btn-en')) {
+        changeLang(savedLang);
+    }
+});

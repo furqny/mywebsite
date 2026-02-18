@@ -17,11 +17,18 @@
         <i class="fa-solid fa-bars"></i>
       </div>
       <div class="nav-links" id="nav-links">
-        <a href="/">Ana Sayfa</a>
-        <a href="/#projects">Projeler</a>
-        <a href="/#about">Hakkımda</a>
-        <a href="/#contact">İletişim</a>
+        <a href="/" class="lang-text" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
+        <a href="/#projects" class="lang-text" data-tr="Projeler" data-en="Projects">Projeler</a>
+        <a href="/#about" class="lang-text" data-tr="Hakkımda" data-en="About Me">Hakkımda</a>
+        <a href="/#contact" class="lang-text" data-tr="İletişim" data-en="Contact">İletişim</a>
       </div>
+
+      <div class="lang-switch">
+        <span id="btn-en" onclick="changeLang('en')">EN</span>
+        <span class="separator">|</span>
+        <span id="btn-tr" onclick="changeLang('tr')">TR</span>
+      </div>
+        
     </nav>
   </header>
 
@@ -29,7 +36,11 @@
     <div class="container">
       
       <h1 class="game-title">Why Not?</h1>
-      <p class="game-subtitle">Unity ile Geliştirilen İlk 2D Platform Projem</p>
+      <p class="game-subtitle lang-text" 
+         data-tr="Unity ile Geliştirilen İlk 2D Platform Projem" 
+         data-en="My First 2D Platform Project Developed with Unity">
+        Unity ile Geliştirilen İlk 2D Platform Projem
+      </p>
 
       <div class="game-media mb-3">
         <img src="../img/game1.png" alt="Why Not Ana Görsel" class="main-image">
@@ -38,49 +49,59 @@
       <div class="row">
         
         <div class="col-8">
-          <h3>Oyun Hakkında</h3>
-          <p>
+          <h3 class="lang-text" data-tr="Oyun Hakkında" data-en="About the Game">Oyun Hakkında</h3>
+          <p class="lang-text" 
+             data-tr="Why Not, klasik Mario tarzı platform öğelerini mizahi bir hedefle birleştiren bir 2D macera oyunudur. Oyuncunun amacı sadece hayatta kalmak değil, bölüm boyunca dağıtılmış paraları toplayarak bölüm sonundaki ayakkabı mağazasına ulaşmaktır." 
+             data-en="Why Not is a 2D adventure game that combines classic Mario-style platforming elements with a humorous goal. The player's objective is not only to survive but also to collect coins scattered throughout the level to reach the shoe store at the end.">
             Why Not, klasik Mario tarzı platform öğelerini mizahi bir hedefle birleştiren bir 2D macera oyunudur. 
             Oyuncunun amacı sadece hayatta kalmak değil, bölüm boyunca dağıtılmış paraları toplayarak 
             bölüm sonundaki ayakkabı mağazasına ulaşmaktır.
           </p>
-          <p class="mt-1">
+          <p class="mt-1 lang-text" 
+             data-tr="Ancak bir sorun var: Eğer mağazaya vardığınızda o çok istediğiniz ayakkabıyı alacak kadar paranız yoksa, tüm çabanız boşa gider! Parkur yeteneklerinizi ekonomi yönetiminizle birleştirmeniz gereken eğlenceli bir dönem projesidir." 
+             data-en="But there's a catch: If you don't have enough money to buy the shoe you want so much when you reach the store, all your efforts will be in vain! It's a fun term project where you need to combine your parkour skills with your economy management.">
             Ancak bir sorun var: Eğer mağazaya vardığınızda o çok istediğiniz ayakkabıyı alacak kadar paranız yoksa, 
             tüm çabanız boşa gider! Parkur yeteneklerinizi ekonomi yönetiminizle birleştirmeniz gereken eğlenceli bir dönem projesidir.
           </p>
           
-          <h3 class="mt-3">Neler Yaptım? (My Role)</h3>
-          <p>
+          <h3 class="mt-3 lang-text" data-tr="Neler Yaptım? (My Role)" data-en="What Did I Do? (My Role)">Neler Yaptım? (My Role)</h3>
+          <p class="lang-text" 
+             data-tr="Bu proje, oyun geliştirme dünyasına attığım ilk adımdır. 3 kişilik bir ekipte <strong>Developer</strong> ve <strong>Sound Designer</strong> olarak görev aldım. Başlıca katkılarım:" 
+             data-en="This project is my first step into the world of game development. I worked as a <strong>Developer</strong> and <strong>Sound Designer</strong> in a team of 3. My main contributions:">
             Bu proje, oyun geliştirme dünyasına attığım ilk adımdır. 3 kişilik bir ekipte <strong>Developer</strong> ve 
             <strong>Sound Designer</strong> olarak görev aldım. Başlıca katkılarım:
           </p>
           <ul class="role-list">
-            <li><strong>Gameplay Scripting (C#):</strong> Karakterin hareket mekaniklerini, zıplama fizikleri ve platform etkileşimlerini kodladım.</li>
-            <li><strong>Economy System:</strong> Toplanan paraların sayılması ve bölüm sonunda "Yeterli bakiye var mı?" kontrolünü yapan algoritmayı yazdım.</li>
-            <li><strong>Level Mechanics:</strong> Engellerin basit yapay zeka (hareket döngüsü) mantığını kurguladım.</li>
-            <li><strong>Sound & Visuals:</strong> Oyunun ses efektlerinin entegrasyonunu ve bazı 2D assetlerin tasarımını üstlendim.</li>
+            <li><strong>Gameplay Scripting (C#):</strong> <span class="lang-text" data-tr="Karakterin hareket mekaniklerini, zıplama fizikleri ve platform etkileşimlerini kodladım." data-en="I coded the character's movement mechanics, jumping physics, and platform interactions.">Karakterin hareket mekaniklerini, zıplama fizikleri ve platform etkileşimlerini kodladım.</span></li>
+            <li><strong>Economy System:</strong> <span class="lang-text" data-tr="Toplanan paraların sayılması ve bölüm sonunda 'Yeterli bakiye var mı?' kontrolünü yapan algoritmayı yazdım." data-en="I wrote the algorithm that counts the collected coins and checks 'Is there enough balance?' at the end of the level.">Toplanan paraların sayılması ve bölüm sonunda "Yeterli bakiye var mı?" kontrolünü yapan algoritmayı yazdım.</span></li>
+            <li><strong>Level Mechanics:</strong> <span class="lang-text" data-tr="Engellerin basit yapay zeka (hareket döngüsü) mantığını kurguladım." data-en="I designed the simple AI (movement loop) logic of the obstacles.">Engellerin basit yapay zeka (hareket döngüsü) mantığını kurguladım.</span></li>
+            <li><strong>Sound & Visuals:</strong> <span class="lang-text" data-tr="Oyunun ses efektlerinin entegrasyonunu ve bazı 2D assetlerin tasarımını üstlendim." data-en="I took charge of integrating the game's sound effects and designing some 2D assets.">Oyunun ses efektlerinin entegrasyonunu ve bazı 2D assetlerin tasarımını üstlendim.</span></li>
           </ul>
 
           <div class="game-buttons mt-3">
-            <a href="https://github.com/furqny/Why-Not" target="_blank" class="btn btn-primary"><i class="fa-brands fa-github"></i> Kaynak Kodları İncele</a>
-            </div>
+            <a href="https://github.com/furqny/Why-Not" target="_blank" class="btn btn-primary lang-text" data-tr="Kaynak Kodları İncele" data-en="View Source Code">
+              <i class="fa-brands fa-github"></i> Kaynak Kodları İncele
+            </a>
+          </div>
         </div>
 
         <div class="col-4">
           <div class="tech-box">
-            <h4>Proje Bilgileri</h4>
+            <h4 class="lang-text" data-tr="Proje Bilgileri" data-en="Project Details">Proje Bilgileri</h4>
             <ul>
-              <li><i class="fa-solid fa-gamepad"></i> <strong>Tür:</strong> 2D Side-Scroller</li>
-              <li><i class="fa-solid fa-microchip"></i> <strong>Motor:</strong> Unity 2022.3.11f1</li>
-              <li><i class="fa-solid fa-code"></i> <strong>Dil:</strong> C#</li>
-              <li><i class="fa-solid fa-calendar"></i> <strong>Süre:</strong> 2 Ay</li>
-              <li><i class="fa-solid fa-users"></i> <strong>Takım:</strong> 3 Kişi</li>
-              <li><i class="fa-solid fa-desktop"></i> <strong>Platform:</strong> PC (Windows)</li>
+              <li><i class="fa-solid fa-gamepad"></i> <span class="lang-text" data-tr="<strong>Tür:</strong> 2D Side-Scroller" data-en="<strong>Genre:</strong> 2D Side-Scroller"><strong>Tür:</strong> 2D Side-Scroller</span></li>
+              <li><i class="fa-solid fa-microchip"></i> <span class="lang-text" data-tr="<strong>Motor:</strong> Unity 2022.3.11f1" data-en="<strong>Engine:</strong> Unity 2022.3.11f1"><strong>Motor:</strong> Unity 2022.3.11f1</span></li>
+              <li><i class="fa-solid fa-code"></i> <span class="lang-text" data-tr="<strong>Dil:</strong> C#" data-en="<strong>Language:</strong> C#"><strong>Dil:</strong> C#</span></li>
+              <li><i class="fa-solid fa-calendar"></i> <span class="lang-text" data-tr="<strong>Süre:</strong> 2 Ay" data-en="<strong>Duration:</strong> 2 Months"><strong>Süre:</strong> 2 Ay</span></li>
+              <li><i class="fa-solid fa-users"></i> <span class="lang-text" data-tr="<strong>Takım:</strong> 3 Kişi" data-en="<strong>Team:</strong> 3 People"><strong>Takım:</strong> 3 Kişi</span></li>
+              <li><i class="fa-solid fa-desktop"></i> <span class="lang-text" data-tr="<strong>Platform:</strong> PC (Windows)" data-en="<strong>Platform:</strong> PC (Windows)"><strong>Platform:</strong> PC (Windows)</span></li>
             </ul>
           </div>
         </div>
 
-      </div> <h3 class="mt-3 text-center">Ekran Görüntüleri</h3>
+      </div> 
+      
+      <h3 class="mt-3 text-center lang-text" data-tr="Ekran Görüntüleri" data-en="Screenshots">Ekran Görüntüleri</h3>
       <div class="gallery-grid mt-2">
         <img src="../img/whynotingame (1).png" alt="Why Not Oynanış 1">
         <img src="../img/whynotingame (2).png" alt="Why Not Oynanış 2">
@@ -88,7 +109,7 @@
       </div>
 
       <div class="mt-3 text-center">
-        <a href="/#projects" class="btn btn-primary">
+        <a href="/#projects" class="btn btn-primary lang-text" data-tr="Projelere Geri Dön" data-en="Return to Projects">
           <i class="fa-solid fa-arrow-left"></i> Projelere Geri Dön
         </a>
       </div>

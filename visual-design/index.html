@@ -19,11 +19,18 @@
         <i class="fa-solid fa-bars"></i>
       </div>
       <div class="nav-links" id="nav-links">
-        <a href="/">Ana Sayfa</a>
-        <a href="/#projects">Projeler</a>
-        <a href="/#about">Hakkımda</a>
-        <a href="/#contact">İletişim</a>
+        <a href="/" class="lang-text" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
+        <a href="/#projects" class="lang-text" data-tr="Projeler" data-en="Projects">Projeler</a>
+        <a href="/#about" class="lang-text" data-tr="Hakkımda" data-en="About Me">Hakkımda</a>
+        <a href="/#contact" class="lang-text" data-tr="İletişim" data-en="Contact">İletişim</a>
       </div>
+
+      <div class="lang-switch">
+        <span id="btn-en" onclick="changeLang('en')">EN</span>
+        <span class="separator">|</span>
+        <span id="btn-tr" onclick="changeLang('tr')">TR</span>
+      </div>
+        
     </nav>
   </header>
 
@@ -31,17 +38,25 @@
     <div class="container">
       
       <h1 class="game-title">Visual Arts & Design</h1>
-      <p class="game-subtitle">3D Modeller, Karakter Tasarımları ve 2D Çizimler</p>
+      <p class="game-subtitle lang-text" 
+         data-tr="3D Modeller, Karakter Tasarımları ve 2D Çizimler" 
+         data-en="3D Models, Character Designs, and 2D Illustrations">
+        3D Modeller, Karakter Tasarımları ve 2D Çizimler
+      </p>
 
-      <h2 class="section-title mt-3"><i class="fa-solid fa-cube"></i> 3D Varlıklar (Interactive)</h2>
-      <p class="mb-3">Modelleri çevirmek için sürükleyin, yakınlaştırmak için tekerleği kullanın.</p>
+      <h2 class="section-title mt-3">
+        <i class="fa-solid fa-cube"></i> 
+        <span class="lang-text" data-tr="3D Varlıklar (İnteraktif)" data-en="3D Assets (Interactive)">3D Varlıklar (Interactive)</span>
+      </h2>
+      
+      <p class="mb-3 lang-text" 
+         data-tr="Modelleri çevirmek için sürükleyin, yakınlaştırmak için tekerleği kullanın." 
+         data-en="Drag to rotate the models, use the scroll wheel to zoom in.">
+        Modelleri çevirmek için sürükleyin, yakınlaştırmak için tekerleği kullanın.
+      </p>
       
       <div class="models-grid">
         
-
-
-
-
         <div class="model-card">
           <model-viewer 
             src="../img/models/room.glb" 
@@ -52,10 +67,9 @@
             touch-action="pan-y">
           </model-viewer>
           <div class="model-info">
-            <h4>Izometrik Oda Tasarımı</h4>
+            <h4 class="lang-text" data-tr="İzometrik Oda Tasarımı" data-en="Isometric Room Design">İzometrik Oda Tasarımı</h4>
           </div>
         </div>
-
 
         <div class="model-card">
           <model-viewer 
@@ -67,11 +81,9 @@
             touch-action="pan-y">
           </model-viewer>
           <div class="model-info">
-            <h4>Masa ve Sandalye Tasarımı</h4>
+            <h4 class="lang-text" data-tr="Masa ve Sandalye Tasarımı" data-en="Table & Chair Design">Masa ve Sandalye Tasarımı</h4>
           </div>
         </div>
-
-
 
         <div class="model-card">
           <model-viewer 
@@ -83,83 +95,77 @@
             touch-action="pan-y">
           </model-viewer>
           <div class="model-info">
-            <h4>Robot Süpürge</h4>
+            <h4 class="lang-text" data-tr="Robot Süpürge" data-en="Robot Vacuum Cleaner">Robot Süpürge</h4>
           </div>
         </div>
 
-
-          <div class="model-card">
+        <div class="model-card">
           <model-viewer 
             src="../img/models/owen.glb" 
-            alt="3D Floor Lamp Model" 
+            alt="3D Oven Model" 
             auto-rotate 
             camera-controls 
             shadow-intensity="1"
             touch-action="pan-y">
           </model-viewer>
           <div class="model-info">
-            <h4>Fırın</h4>
+            <h4 class="lang-text" data-tr="Fırın" data-en="Oven Model">Fırın</h4>
           </div>
         </div>
 
-
-          <div class="model-card">
+        <div class="model-card">
           <model-viewer 
             src="../img/models/phone.glb" 
-            alt="3D Floor Lamp Model" 
+            alt="3D Rotary Phone Model" 
             auto-rotate 
             camera-controls 
             shadow-intensity="1"
             touch-action="pan-y">
           </model-viewer>
           <div class="model-info">
-            <h4>Ahizeli Telefon</h4>
+            <h4 class="lang-text" data-tr="Ahizeli Telefon" data-en="Rotary Telephone">Ahizeli Telefon</h4>
           </div>
         </div>
 
-          <div class="model-card">
+        <div class="model-card">
           <model-viewer 
             src="../img/models/totoro.glb" 
-            alt="3D Floor Lamp Model" 
+            alt="3D Totoro Model" 
             auto-rotate 
             camera-controls 
             shadow-intensity="1"
             touch-action="pan-y">
           </model-viewer>
           <div class="model-info">
-            <h4>Totoro</h4>
-          </div>
+            <h4>Totoro</h4> </div>
         </div>
 
         <div class="model-card">
           <model-viewer 
             src="../img/models/monster.glb" 
-            alt="3D Floor Lamp Model" 
+            alt="3D Monster Model" 
             auto-rotate 
             camera-controls 
             shadow-intensity="1"
             touch-action="pan-y">
           </model-viewer>
           <div class="model-info">
-            <h4>Monster</h4>
-          </div>
+            <h4>Monster</h4> </div>
         </div>
-
 
         <div class="model-card">
           <model-viewer 
             src="../img/models/char1.glb" 
-            alt="3D Floor Lamp Model" 
+            alt="3D NPC Design Model" 
             auto-rotate 
             camera-controls 
             shadow-intensity="1"
             touch-action="pan-y">
           </model-viewer>
           <div class="model-info">
-            <h4>NPC Tasarımı 1</h4>
+            <h4 class="lang-text" data-tr="NPC Tasarımı 1" data-en="NPC Design 1">NPC Tasarımı 1</h4>
           </div>
         </div>
-
       
         <div class="model-card">
           <model-viewer 
@@ -171,33 +177,39 @@
             touch-action="pan-y">
           </model-viewer>
           <div class="model-info">
-            <h4>Abajür</h4>
+            <h4 class="lang-text" data-tr="Abajur" data-en="Floor Lamp">Abajur</h4>
           </div>
         </div>
 
-      </div> <hr class="divider">
+      </div> 
+      
+      <hr class="divider">
 
-      <h2 class="section-title mt-3"><i class="fa-solid fa-paintbrush"></i> 2D Konsept & UI Tasarımları</h2>
+      <h2 class="section-title mt-3">
+        <i class="fa-solid fa-paintbrush"></i> 
+        <span class="lang-text" data-tr="2D Konsept & UI Tasarımları" data-en="2D Concept & UI Designs">2D Konsept & UI Tasarımları</span>
+      </h2>
       
       <div class="gallery-grid mt-2">
-        <img src="../img/pixelart1.png" alt="Pixel Art Tasarımı">
-        <img src="../img/pizelart2.png" alt="Pixel Art Tasarımı">
-        <img src="../img/balance.png" alt="Karakter Eskizi">
+        <img src="../img/pixelart1.png" alt="Pixel Art Design">
+        <img src="../img/pizelart2.png" alt="Pixel Art Design">
+        <img src="../img/balance.png" alt="Character Sketch">
         <img src="../img/disappear.png" alt="Environment Art">
-        <img src="../img/podcasticon.png" alt="Environment Art">
-        <img src="../img/pet4.png" alt="Environment Art">
-        <img src="../img/pet2.png" alt="Environment Art">
-        <img src="../img/pet3.png" alt="Environment Art">
-        <img src="../img/pet1.png" alt="Environment Art">
+        <img src="../img/podcasticon.png" alt="Podcast Icon Art">
+        <img src="../img/pet4.png" alt="Pet Concept Art">
+        <img src="../img/pet2.png" alt="Pet Concept Art">
+        <img src="../img/pet3.png" alt="Pet Concept Art">
+        <img src="../img/pet1.png" alt="Pet Concept Art">
       </div>
 
       <div class="mt-3 text-center">
-        <a href="/" class="btn btn-primary">
+        <a href="/" class="btn btn-primary lang-text" data-tr="Ana Sayfaya Dön" data-en="Return to Home Page">
           <i class="fa-solid fa-house"></i> Ana Sayfaya Dön
         </a>
       </div>
 
-    </div> </section>
+    </div> 
+  </section>
 
   <footer>
     <p>© 2025 Furkan Yıldız</p>

@@ -17,11 +17,18 @@
         <i class="fa-solid fa-bars"></i>
       </div>
       <div class="nav-links" id="nav-links">
-        <a href="/">Ana Sayfa</a>
-        <a href="/#projects">Projeler</a>
-        <a href="/#about">Hakkımda</a>
-        <a href="/#contact">İletişim</a>
+        <a href="/" class="lang-text" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
+        <a href="/#projects" class="lang-text" data-tr="Projeler" data-en="Projects">Projeler</a>
+        <a href="/#about" class="lang-text" data-tr="Hakkımda" data-en="About Me">Hakkımda</a>
+        <a href="/#contact" class="lang-text" data-tr="İletişim" data-en="Contact">İletişim</a>
       </div>
+
+      <div class="lang-switch">
+        <span id="btn-en" onclick="changeLang('en')">EN</span>
+        <span class="separator">|</span>
+        <span id="btn-tr" onclick="changeLang('tr')">TR</span>
+      </div>
+        
     </nav>
   </header>
 
@@ -29,7 +36,11 @@
     <div class="container">
       
       <h1 class="game-title">Red Knight</h1>
-      <p class="game-subtitle">48 Saatte Geliştirilen Game Jam Projesi ("Işığı Kullan" Teması)</p>
+      <p class="game-subtitle lang-text" 
+         data-tr="48 Saatte Geliştirilen Game Jam Projesi (&quot;Işığı Kullan&quot; Teması)" 
+         data-en="Game Jam Project Developed in 48 Hours (&quot;Use the Light&quot; Theme)">
+        48 Saatte Geliştirilen Game Jam Projesi ("Işığı Kullan" Teması)
+      </p>
 
       <div class="game-media mb-3">
         <img src="../img/redknightbg.png" alt="Red Knight Ana Görsel" class="main-image">
@@ -38,74 +49,82 @@
       <div class="row">
         
         <div class="col-8">
-          <h3>Oyun Hakkında</h3>
-          <p>
+          <h3 class="lang-text" data-tr="Oyun Hakkında" data-en="About the Game">Oyun Hakkında</h3>
+          <p class="lang-text" 
+             data-tr="Red Knight, &quot;Işığı Kullan&quot; temalı bir Game Jam kapsamında, 4 kişilik bir ekiple <strong>sadece 48 saatte</strong> sıfırdan geliştirilmiş 2D Top-Down bir hayatta kalma oyunudur. Oyuncu, karanlık bir tapınakta engelleri aşarak ilerlemeye çalışan bir şövalyeyi kontrol eder." 
+             data-en="Red Knight is a 2D Top-Down survival game developed from scratch in <strong>just 48 hours</strong> by a team of 4 for a Game Jam with the theme &quot;Use the Light&quot;. The player controls a knight trying to advance by overcoming obstacles in a dark temple.">
             Red Knight, "Işığı Kullan" temalı bir Game Jam kapsamında, 4 kişilik bir ekiple <strong>sadece 48 saatte</strong> 
             sıfırdan geliştirilmiş 2D Top-Down bir hayatta kalma oyunudur. Oyuncu, karanlık bir tapınakta engelleri aşarak 
             ilerlemeye çalışan bir şövalyeyi kontrol eder.
           </p>
-          <p class="mt-1">
+          <p class="mt-1 lang-text" 
+             data-tr="Oyunun temel mekaniği &quot;Rastgele Işıklar&quot; üzerine kuruludur. Kare şeklindeki odada ışıklar belirli aralıklarla söner ve karanlıkta farklı renklerde ışık huzmeleri hareket etmeye başlar. Oyuncunun amacı, bu kaotik ortamda 1 dakika boyunca hayatta kalmaktır." 
+             data-en="The core mechanic of the game is built upon &quot;Random Lights&quot;. In a square-shaped room, the lights go out at certain intervals, and light beams of different colors start moving in the dark. The player's goal is to survive in this chaotic environment for 1 minute.">
             Oyunun temel mekaniği "Rastgele Işıklar" üzerine kuruludur. Kare şeklindeki odada ışıklar belirli aralıklarla söner 
             ve karanlıkta farklı renklerde ışık huzmeleri hareket etmeye başlar. Oyuncunun amacı, bu kaotik ortamda 
             1 dakika boyunca hayatta kalmaktır.
           </p>
           
-          <h3 class="mt-3">Neler Yaptım?</h3>
-          <p>
+          <h3 class="mt-3 lang-text" data-tr="Neler Yaptım?" data-en="What Did I Do? (My Role)">Neler Yaptım?</h3>
+          <p class="lang-text" 
+             data-tr="Bu projede <strong>Game Designer</strong> ve <strong>Gameplay Programmer</strong> rollerini üstlendim. Oyunun temel fikrini bulan kişi olarak, kısıtlı sürede mekanikleri koda döktüm. Başlıca katkılarım:" 
+             data-en="In this project, I took on the roles of <strong>Game Designer</strong> and <strong>Gameplay Programmer</strong>. As the person who came up with the core idea of the game, I coded the mechanics within a limited time. My main contributions:">
             Bu projede <strong>Game Designer</strong> ve <strong>Gameplay Programmer</strong> rollerini üstlendim. 
             Oyunun temel fikrini bulan kişi olarak, kısıtlı sürede mekanikleri koda döktüm. Başlıca katkılarım:
           </p>
           <ul class="role-list">
-            <li><strong>Game Design:</strong> "Işığı Kullan" temasını, ışıkların oyuncuya dost veya düşman olduğu bir hayatta kalma mekaniğine dönüştürdüm.</li>
-            <li><strong>Buff/Debuff Sistemi:</strong> Farklı renkteki ışıkların (Yeşil: +Can, Kırmızı: Yüksek Hasar, Mavi: Dondurma vb.) çarpışma mantığını ve etkilerini kodladım.</li>
-            <li><strong>RNG (Random Number Generator):</strong> Sarı ışığın %50 ihtimalle can vermesi veya alması gibi risk/ödül mekaniklerini kurguladım.</li>
-            <li><strong>Level Design:</strong> İlk bölümde temel renklerle başlayıp, ilerledikçe Mavi (Dondurma) ve Sarı (Şans) ışıkların eklendiği zorluk eğrisini tasarladım.</li>
+            <li><strong>Game Design:</strong> <span class="lang-text" data-tr="&quot;Işığı Kullan&quot; temasını, ışıkların oyuncuya dost veya düşman olduğu bir hayatta kalma mekaniğine dönüştürdüm." data-en="I transformed the 'Use the Light' theme into a survival mechanic where lights are either friends or foes to the player.">"Işığı Kullan" temasını, ışıkların oyuncuya dost veya düşman olduğu bir hayatta kalma mekaniğine dönüştürdüm.</span></li>
+            <li><strong>Buff/Debuff Sistemi:</strong> <span class="lang-text" data-tr="Farklı renkteki ışıkların (Yeşil: +Can, Kırmızı: Yüksek Hasar, Mavi: Dondurma vb.) çarpışma mantığını ve etkilerini kodladım." data-en="I coded the collision logic and effects of different colored lights (Green: +Health, Red: High Damage, Blue: Freeze, etc.).">Farklı renkteki ışıkların (Yeşil: +Can, Kırmızı: Yüksek Hasar, Mavi: Dondurma vb.) çarpışma mantığını ve etkilerini kodladım.</span></li>
+            <li><strong>RNG (Random Number Generator):</strong> <span class="lang-text" data-tr="Sarı ışığın %50 ihtimalle can vermesi veya alması gibi risk/ödül mekaniklerini kurguladım." data-en="I designed risk/reward mechanics, such as the yellow light having a 50% chance to either grant or take health.">Sarı ışığın %50 ihtimalle can vermesi veya alması gibi risk/ödül mekaniklerini kurguladım.</span></li>
+            <li><strong>Level Design:</strong> <span class="lang-text" data-tr="İlk bölümde temel renklerle başlayıp, ilerledikçe Mavi (Dondurma) ve Sarı (Şans) ışıkların eklendiği zorluk eğrisini tasarladım." data-en="I designed the difficulty curve, starting with basic colors in the first level and adding Blue (Freeze) and Yellow (Chance) lights as the game progresses.">İlk bölümde temel renklerle başlayıp, ilerledikçe Mavi (Dondurma) ve Sarı (Şans) ışıkların eklendiği zorluk eğrisini tasarladım.</span></li>
           </ul>
 
           <div class="game-buttons mt-3">
-            <a href="https://github.com/kullaniciadin/Red-Knight" target="_blank" class="btn btn-primary">
+            <a href="https://github.com/kullaniciadin/Red-Knight" target="_blank" class="btn btn-primary lang-text" data-tr="Kaynak Kodları İncele" data-en="View Source Code">
               <i class="fa-brands fa-github"></i> Kaynak Kodları İncele
             </a>
-            </div>
+          </div>
         </div>
 
         <div class="col-4">
           <div class="tech-box">
-            <h4>Proje Bilgileri</h4>
+            <h4 class="lang-text" data-tr="Proje Bilgileri" data-en="Project Details">Proje Bilgileri</h4>
             <ul>
-              <li><i class="fa-solid fa-gamepad"></i> <strong>Tür:</strong> Arcade, Survival</li>
-              <li><i class="fa-solid fa-microchip"></i> <strong>Motor:</strong> Unity</li>
-              <li><i class="fa-solid fa-code"></i> <strong>Dil:</strong> C#</li>
-              <li><i class="fa-solid fa-stopwatch"></i> <strong>Süre:</strong> 48 Saat (Game Jam)</li>
-              <li><i class="fa-solid fa-users"></i> <strong>Takım:</strong> 4 Kişi</li>
-              <li><i class="fa-solid fa-desktop"></i> <strong>Platform:</strong> PC (Windows)</li>
+              <li><i class="fa-solid fa-gamepad"></i> <span class="lang-text" data-tr="<strong>Tür:</strong> Arcade, Survival" data-en="<strong>Genre:</strong> Arcade, Survival"><strong>Tür:</strong> Arcade, Survival</span></li>
+              <li><i class="fa-solid fa-microchip"></i> <span class="lang-text" data-tr="<strong>Motor:</strong> Unity" data-en="<strong>Engine:</strong> Unity"><strong>Motor:</strong> Unity</span></li>
+              <li><i class="fa-solid fa-code"></i> <span class="lang-text" data-tr="<strong>Dil:</strong> C#" data-en="<strong>Language:</strong> C#"><strong>Dil:</strong> C#</span></li>
+              <li><i class="fa-solid fa-stopwatch"></i> <span class="lang-text" data-tr="<strong>Süre:</strong> 48 Saat (Game Jam)" data-en="<strong>Duration:</strong> 48 Hours (Game Jam)"><strong>Süre:</strong> 48 Saat (Game Jam)</span></li>
+              <li><i class="fa-solid fa-users"></i> <span class="lang-text" data-tr="<strong>Takım:</strong> 4 Kişi" data-en="<strong>Team:</strong> 4 People"><strong>Takım:</strong> 4 Kişi</span></li>
+              <li><i class="fa-solid fa-desktop"></i> <span class="lang-text" data-tr="<strong>Platform:</strong> PC (Windows)" data-en="<strong>Platform:</strong> PC (Windows)"><strong>Platform:</strong> PC (Windows)</span></li>
             </ul>
           </div>
           
           <div class="tech-box mt-2">
-            <h4>Işık Mekanikleri</h4>
+            <h4 class="lang-text" data-tr="Işık Mekanikleri" data-en="Light Mechanics">Işık Mekanikleri</h4>
             <ul style="font-size: 0.9rem;">
-              <li style="color: #4ade80;">• <strong>Yeşil:</strong> +5 Can</li>
-              <li style="color: #ef4444;">• <strong>Kırmızı:</strong> -20 Can</li>
-              <li style="color: #e5e7eb;">• <strong>Beyaz:</strong> -10 Can </li>
-              <li style="color: #facc15;">• <strong>Sarı:</strong> %50 Şans (+10 / -10)</li>
-              <li style="color: #3b82f6;">• <strong>Mavi:</strong> 3sn Dondurma (Stun)</li>
+              <li style="color: #4ade80;">• <strong class="lang-text" data-tr="Yeşil:" data-en="Green:">Yeşil:</strong> <span class="lang-text" data-tr="+5 Can" data-en="+5 Health">+5 Can</span></li>
+              <li style="color: #ef4444;">• <strong class="lang-text" data-tr="Kırmızı:" data-en="Red:">Kırmızı:</strong> <span class="lang-text" data-tr="-20 Can" data-en="-20 Health">-20 Can</span></li>
+              <li style="color: #e5e7eb;">• <strong class="lang-text" data-tr="Beyaz:" data-en="White:">Beyaz:</strong> <span class="lang-text" data-tr="-10 Can" data-en="-10 Health">-10 Can</span></li>
+              <li style="color: #facc15;">• <strong class="lang-text" data-tr="Sarı:" data-en="Yellow:">Sarı:</strong> <span class="lang-text" data-tr="%50 Şans (+10 / -10)" data-en="50% Chance (+10 / -10)">%50 Şans (+10 / -10)</span></li>
+              <li style="color: #3b82f6;">• <strong class="lang-text" data-tr="Mavi:" data-en="Blue:">Mavi:</strong> <span class="lang-text" data-tr="3sn Dondurma (Stun)" data-en="3sec Freeze (Stun)">3sn Dondurma (Stun)</span></li>
             </ul>
           </div>
 
         </div>
 
-      </div> <h3 class="mt-3 text-center">Oyun İçi Görseller</h3>
+      </div> 
+      
+      <h3 class="mt-3 text-center lang-text" data-tr="Oyun İçi Görseller" data-en="In-Game Screenshots">Oyun İçi Görseller</h3>
       <div class="gallery-grid mt-2">
-        <img src="../img/redknight (1).png" alt="Red Knight Tuttorial 1">
-        <img src="../img/redknight (2).png" alt="Red Knight Tuttorial 2">
-        <img src="../img/redknight (3).png" alt="Red Knight Tuttorial 3">
-        <img src="../img/redknight (4).png" alt="Red Knight Işıklar AÇıkken">
-        <img src="../img/redknight (5).png" alt="Red Knight Işıklar Kapalıyken">
+        <img src="../img/redknight (1).png" alt="Red Knight Tutorial 1">
+        <img src="../img/redknight (2).png" alt="Red Knight Tutorial 2">
+        <img src="../img/redknight (3).png" alt="Red Knight Tutorial 3">
+        <img src="../img/redknight (4).png" alt="Red Knight Lights On">
+        <img src="../img/redknight (5).png" alt="Red Knight Lights Off">
       </div>
 
       <div class="mt-3 text-center">
-        <a href="/#projects" class="btn btn-primary">
+        <a href="/#projects" class="btn btn-primary lang-text" data-tr="Projelere Geri Dön" data-en="Return to Projects">
           <i class="fa-solid fa-arrow-left"></i> Projelere Geri Dön
         </a>
       </div>

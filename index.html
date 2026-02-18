@@ -3,156 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data:;">
   <title>Furkan YILDIZ - Portfolio</title>
   <link rel="icon" type="image/png" href="img/icon.png">
   <link rel="stylesheet" href="css/style.css">
-  
-  <!-- Font Awesome ikonları -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
-
-
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-    <!-- menü -->
-    <header>
-  <nav>
-    <div class="menu-toggle" id="mobile-menu">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-
-<nav>
-    <div class="nav-links" id="nav-links">
-      <a href="./">Ana Sayfa</a> 
-      
-      <a href="/#projects">Projeler</a>
-      <a href="/#about">Hakkımda</a>
-      <a href="/#contact">İletişim</a>
-    </div>
-</nav>
-</header>
   
-    <!-- kahraman alanı -->
+  <header>
+    <nav>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="nav-links" id="nav-links">
+        <a href="./" class="lang-text" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a> 
+        <a href="/#projects" class="lang-text" data-tr="Projeler" data-en="Projects">Projeler</a>
+        <a href="/#about" class="lang-text" data-tr="Hakkımda" data-en="About Me">Hakkımda</a>
+        <a href="/#contact" class="lang-text" data-tr="İletişim" data-en="Contact">İletişim</a>
+      </div>
+
+      <div class="lang-switch">
+        <span id="btn-en" onclick="changeLang('en')">EN</span>
+        <span class="separator">|</span>
+        <span id="btn-tr" onclick="changeLang('tr')">TR</span>
+      </div>
+    </nav>
+  </header>
+  
   <section id="home">
-  <div class="hero-text">
-    <h1>Merhaba, ben Furkan.</h1>
-    <p>Game Designer</p>
-  </div>
-</section>
-
-      
-  
-   <!-- projeler -->
-<section id="projects" class="my-3">
-  <div class="container">
-    <h2 class="mb-2"><span>Projeler</span></h2>
-
-    <div class="row">
-      <div class="col-4">
-        <a href="why-not/" class="card">
-          <img src="img/game1.png" alt="Why Not oyun görseli">
-          <h3>Why Not</h3>
-          <p>Unity | Side Scroll | Platform</p>
-        </a>
-      </div>
-
-      <div class="col-4">
-        <a href="black-magic/" class="card">
-          <img src="img/game2.png" alt="Black Magic game picture" >
-          <h3>Black Magic</h3>
-          <p>Unity | Platform | Shooter</p>
-        </a>
-      </div>
-
-      <div class="col-4">
-        <a href="red-knight/" class="card">
-          <img src="img/game3.png" alt="Red Knight game picture" >
-          <h3>Red Knight</h3>
-          <p>Unity | Top-Down | Platform</p>
-        </a>
-      </div>
-
-      <div class="col-4">
-        <a href="hallowed-decay/" class="card">
-          <img src="img/game4.png" alt="Hallowed Decay game picture" >
-          <h3>Hallowed Decay</h3>
-          <p>Unreal | FPS | Psychological Horror</p>
-        </a>
-      </div>
-
-      <div class="col-4">
-        <a href="hermes/" class="card">
-          <img src="img/game5.png" alt="Hermes game picture" >
-          <h3>Hallowed Decay</h3>
-          <p>Unreal | Action | Adventure</p>
-        </a>
-      </div>
-
-      <div class="col-4">
-        <a href="visual-design/" class="card">
-          <img src="img/2DAssets.png" alt="Visual Design project picture" >
-          <h3>VISUAL DESIGN</h3>
-          <p>2D/3D ART</p>
-        </a>
-      </div>
-
+    <div class="hero-text">
+      <h1 class="lang-text" data-tr="Merhaba, ben Furkan." data-en="Hi, I'm Furkan.">Merhaba, ben Furkan.</h1>
+      <p>Game Designer</p> 
     </div>
-  </div>
-</section>
+  </section>
 
-      
-  
-    <!-- about me -->
-<section id="about">
-  <h2><span>Hakkımda</span></h2>
-  <p class="mb-3">
-    Muğla Sıtkı Koçman Üniversitesi - Dijital Oyun Tasarımı öğrencisiyim...
+  <section id="projects" class="my-3">
+    <div class="container">
+      <h2><span class="lang-text" data-tr="Projeler" data-en="Projects">Projeler</span></h2>
+
+      <div class="row">
+        
+        <div class="col-4">
+          <a href="why-not/" class="card">
+            <img src="img/game1.png" alt="Why Not oyun görseli">
+            <h3>Why Not</h3>
+            <p>Unity | Side Scroll | Platform</p>
+          </a>
+        </div>
+
+        <div class="col-4">
+          <a href="black-magic/" class="card">
+            <img src="img/game2.png" alt="Black Magic game picture">
+            <h3>Black Magic</h3>
+            <p>Unity | Platform | Shooter</p>
+          </a>
+        </div>
+
+        <div class="col-4">
+          <a href="red-knight/" class="card">
+            <img src="img/game3.png" alt="Red Knight game picture">
+            <h3>Red Knight</h3>
+            <p>Unity | Top-Down | Platform</p>
+          </a>
+        </div>
+
+        <div class="col-4">
+          <a href="hallowed-decay/" class="card">
+            <img src="img/game4.png" alt="Hallowed Decay game picture">
+            <h3>Hallowed Decay</h3>
+            <p>Unreal | FPS | Psychological Horror</p>
+          </a>
+        </div>
+
+        <div class="col-4">
+          <a href="hermes/" class="card">
+            <img src="img/game5.png" alt="Hermes game picture">
+            <h3>Hermes</h3>
+            <p>Unreal | Action | Adventure</p>
+          </a>
+        </div>
+
+        <div class="col-4">
+          <a href="visual-design/" class="card">
+            <img src="img/2DAssets.png" alt="Visual Design project picture">
+            <h3>VISUAL DESIGN</h3>
+            <p>2D/3D ART</p>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2><span class="lang-text" data-tr="Hakkımda" data-en="About Me">Hakkımda</span></h2>
     
-  </p>
+    <p class="mb-3 lang-text" 
+       data-tr="Muğla Sıtkı Koçman Üniversitesi - Dijital Oyun Tasarımı öğrencisiyim." 
+       data-en="I am a Digital Game Design student at Muğla Sıtkı Koçman University.">
+      Muğla Sıtkı Koçman Üniversitesi - Dijital Oyun Tasarımı öğrencisiyim.
+    </p>
 
-  <div style="text-align: center;">
-    <a href="doc/Furkan_Yildiz_CV.pdf" target="_blank" class="btn btn-outline">
-      <i class="fa-solid fa-download"></i> Özgeçmişimi İndir
-    </a>
-  </div>
-
-</section>
-   <!-- contact -->
-<section id="contact">
-  <h2>İletişim</h2>
-
-  <div class="contact-info">
-    <p>Benimle iletişime geçmek için aşağıdaki bağlantılardan birini kullanabilirsin 👇</p>
-
-    <div class="contact-links">
-      <a href="mailto:a.furkanyildiz@outlook.com" class="contact-item">
-        <i class="fa-solid fa-envelope"></i>
-        <span>a.furkanyildiz@outlook.com</span>
-      </a>
-
-      <a href="https://www.linkedin.com/in/ahmet-furkan-yıldız-937364341" target="_blank" class="contact-item">
-        <i class="fa-brands fa-linkedin"></i>
-        <span>LinkedIn</span>
-      </a>
-
-      <a href="https://www.instagram.com/furqny" target="_blank" class="contact-item">
-        <i class="fa-brands fa-instagram"></i>
-        <span>@furqny</span>
+    <div style="text-align: center;">
+      <a href="doc/Furkan_Yildiz_CV.pdf" target="_blank" class="btn btn-outline lang-text" 
+         data-tr="Özgeçmişimi İndir" 
+         data-en="Download My CV">
+        <i class="fa-solid fa-download"></i> Özgeçmişimi İndir
       </a>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section id="contact">
+    <h2 class="lang-text" data-tr="İletişim" data-en="Contact">İletişim</h2>
 
+    <div class="contact-info">
+      <p class="lang-text" 
+         data-tr="Benimle iletişime geçmek için aşağıdaki bağlantılardan birini kullanabilirsin. " 
+         data-en="You can use one of the links below to get in touch with me. ">
+        Benimle iletişime geçmek için aşağıdaki bağlantılardan birini kullanabilirsin. 
+      </p>
+
+      <div class="contact-links">
+        <a href="mailto:a.furkanyildiz@outlook.com" class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span>a.furkanyildiz@outlook.com</span>
+        </a>
+
+        <a href="https://www.linkedin.com/in/ahmet-furkan-yıldız-937364341" target="_blank" class="contact-item">
+          <i class="fa-brands fa-linkedin"></i>
+          <span>LinkedIn</span>
+        </a>
+
+        <a href="https://www.instagram.com/furqny" target="_blank" class="contact-item">
+          <i class="fa-brands fa-instagram"></i>
+          <span>@furqny</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Furkan Yıldız</p>
+  </footer>
   
-    <footer>
-      <p>© 2025 Furkan Yıldız</p>
-    </footer>
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
-  
 </html>

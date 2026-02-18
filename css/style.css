@@ -508,7 +508,47 @@ footer {
 
 } /* DİKKAT: MOBİL MEDYA SORGUSU BURADA BİTİYOR! */
 
+/* ========================================= */
+/* 10. DİL SEÇENEĞİ (LANGUAGE SWITCHER)      */
+/* ========================================= */
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
 
+.lang-switch span {
+    cursor: pointer;
+    color: #6b7280; /* Pasif renk (Gri) */
+    transition: color 0.3s ease;
+}
+
+.lang-switch span:hover {
+    color: #fff;
+}
+
+.lang-switch span.active-lang {
+    color: #a855f7; /* Aktif dil rengi (Mor) */
+}
+
+.lang-switch .separator {
+    color: #4b5563;
+    cursor: default;
+}
+
+/* Mobilde menünün ortasında dursun */
+@media (max-width: 768px) {
+    .lang-switch {
+        margin: 10px auto;
+        justify-content: center;
+    }
+}
 /* -------------------------------------- */
 /* 3D MODEL VİEWER STİLLERİ - ARTIK DIŞARIDA */
 /* -------------------------------------- */

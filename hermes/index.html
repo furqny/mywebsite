@@ -17,11 +17,20 @@
         <i class="fa-solid fa-bars"></i>
       </div>
       <div class="nav-links" id="nav-links">
-        <a href="/">Ana Sayfa</a>
-        <a href="/#projects">Projeler</a>
-        <a href="/#about">Hakkımda</a>
-        <a href="/#contact">İletişim</a>
+        <a href="/" class="lang-text" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
+        <a href="/#projects" class="lang-text" data-tr="Projeler" data-en="Projects">Projeler</a>
+        <a href="/#about" class="lang-text" data-tr="Hakkımda" data-en="About Me">Hakkımda</a>
+        <a href="/#contact" class="lang-text" data-tr="İletişim" data-en="Contact">İletişim</a>
       </div>
+
+      <a href="/#contact" class="lang-text" data-tr="İletişim" data-en="Contact">İletişim</a>
+
+      <div class="lang-switch">
+        <span id="btn-en" onclick="changeLang('en')">EN</span>
+        <span class="separator">|</span>
+        <span id="btn-tr" onclick="changeLang('tr')">TR</span>
+      </div>
+        
     </nav>
   </header>
 
@@ -29,11 +38,16 @@
     <div class="container">
       
       <h1 class="game-title">Hermes</h1>
-      <p class="game-subtitle">Unreal Engine 5 ile Geliştirilen Açık Dünya Macera Oyunu</p>
+      <p class="game-subtitle lang-text" 
+         data-tr="Unreal Engine 5 ile Geliştirilen Açık Dünya Macera Oyunu" 
+         data-en="Open World Adventure Game Developed with Unreal Engine 5">
+        Unreal Engine 5 ile Geliştirilen Açık Dünya Macera Oyunu
+      </p>
       
       <div style="text-align: center; margin-bottom: 20px;">
         <span style="background: #f59e0b; color: #000; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 0.9rem;">
-          <i class="fa-solid fa-person-digging"></i> Geliştirme Aşamasında (Work in Progress)
+          <i class="fa-solid fa-person-digging"></i> 
+          <span class="lang-text" data-tr="Geliştirme Aşamasında (Work in Progress)" data-en="Work in Progress (In Development)">Geliştirme Aşamasında (Work in Progress)</span>
         </span>
       </div>
 
@@ -44,72 +58,80 @@
       <div class="row">
         
         <div class="col-8">
-          <h3>Oyun Hakkında</h3>
-          <p>
+          <h3 class="lang-text" data-tr="Oyun Hakkında" data-en="About the Game">Oyun Hakkında</h3>
+          <p class="lang-text" 
+             data-tr="Mitolojinin ünlü kargocusu Hermes'in henüz bir &quot;Çaylak&quot; olduğu dönemleri konu alan, mizahi tonu yüksek bir açık dünya macera oyunudur. Zeus, efsanevi Pandora'nın Kutusu'nu Hermes'e emanet eder ve onu Pandora'ya ulaştırmasını emreder." 
+             data-en="It is a highly humorous open-world adventure game about the times when Hermes, the famous courier of mythology, was still a &quot;Rookie&quot;. Zeus entrusts the legendary Pandora's Box to Hermes and orders him to deliver it to Pandora.">
             Mitolojinin ünlü kargocusu Hermes'in henüz bir "Çaylak" olduğu dönemleri konu alan, mizahi tonu yüksek bir açık dünya macera oyunudur. 
             Zeus, efsanevi Pandora'nın Kutusu'nu Hermes'e emanet eder ve onu Pandora'ya ulaştırmasını emreder.
           </p>
-          <p class="mt-1">
+          <p class="mt-1 lang-text" 
+             data-tr="Henüz tam bir Tanrı olarak kabul görmeyen Hermes için bu, kendini Olimpos'a kanıtlama şansıdır. Oyun, Disney ve Herkül animasyonlarından ilham alan &quot;Hand-Painted&quot; (El Çizimi) görsel stiliyle, oyuncuyu canlı bir mitolojik dünyaya davet eder. Oyuncu, köylülerle (NPC) diyaloğa girerek Pandora'nın Tapınağı'nı bulmaya çalışırken, bir yandan da açık dünyadaki engelleri aşmalıdır." 
+             data-en="For Hermes, who is not yet accepted as a full God, this is a chance to prove himself to Olympus. The game invites the player to a vibrant mythological world with its &quot;Hand-Painted&quot; visual style inspired by Disney and Hercules animations. The player must overcome open-world obstacles while trying to find Pandora's Temple by interacting with villagers (NPCs).">
             Henüz tam bir Tanrı olarak kabul görmeyen Hermes için bu, kendini Olimpos'a kanıtlama şansıdır. 
             Oyun, Disney ve Herkül animasyonlarından ilham alan "Hand-Painted" (El Çizimi) görsel stiliyle, 
             oyuncuyu canlı bir mitolojik dünyaya davet eder. Oyuncu, köylülerle (NPC) diyaloğa girerek Pandora'nın Tapınağı'nı
             bulmaya çalışırken, bir yandan da açık dünyadaki engelleri aşmalıdır.
           </p>
           
-          <h3 class="mt-3">Neler Yaptım? </h3>
-          <p>
+          <h3 class="mt-3 lang-text" data-tr="Neler Yaptım?" data-en="What Did I Do? (My Role)">Neler Yaptım? </h3>
+          <p class="lang-text" 
+             data-tr="Team Nyx ekibiyle geliştirdiğimiz bu projede <strong>Game Designer</strong> ve <strong>Main Programmer</strong> olarak görev alıyorum. Proje şu an 2. ayında olup geliştirmesi devam etmektedir. Şu ana kadarki katkılarım:" 
+             data-en="In this project, which we are developing with Team Nyx, I am working as the <strong>Game Designer</strong> and <strong>Main Programmer</strong>. The project is currently in its 2nd month and development is ongoing. My contributions so far:">
             Team Nyx ekibiyle geliştirdiğimiz bu projede <strong>Game Designer</strong> ve <strong>Main Programmer</strong>  
             olarak görev alıyorum. Proje şu an 2. ayında olup geliştirmesi devam etmektedir. Şu ana kadarki katkılarım:
           </p>
           <ul class="role-list">
-            <li><strong>Core Gameplay Mechanics:</strong> Karakterin hareket (Walk, Run, Jump) mekaniklerini Blueprint ile kodladım.</li>
-            <li><strong>Dialogue & Quest System:</strong> NPC'lerle etkileşime girilmesini sağlayan detaylı diyalog sistemini ve görev akış mantığını kurdum.</li>
-            <li><strong>Inventory System:</strong> Oyuncunun eşya toplayıp yönetebildiği envanter sisteminin altyapısını hazırladım.</li>
-            <li><strong>Cinematic Logic:</strong> Oyun içi ara sahnelerin tetiklenme ve oynatılma kodlarını yazdım.</li>
-            <li><strong>UI/UX Programming:</strong> Ana menü ve oyun içi arayüzlerin kod tarafındaki fonksiyonlarını entegre ettim.</li>
+            <li><strong>Core Gameplay Mechanics:</strong> <span class="lang-text" data-tr="Karakterin hareket (Walk, Run, Jump) mekaniklerini Blueprint ile kodladım." data-en="I coded the character's movement (Walk, Run, Jump) mechanics using Blueprints.">Karakterin hareket (Walk, Run, Jump) mekaniklerini Blueprint ile kodladım.</span></li>
+            <li><strong>Dialogue & Quest System:</strong> <span class="lang-text" data-tr="NPC'lerle etkileşime girilmesini sağlayan detaylı diyalog sistemini ve görev akış mantığını kurdum." data-en="I built a detailed dialogue system and quest flow logic that allows interaction with NPCs.">NPC'lerle etkileşime girilmesini sağlayan detaylı diyalog sistemini ve görev akış mantığını kurdum.</span></li>
+            <li><strong>Inventory System:</strong> <span class="lang-text" data-tr="Oyuncunun eşya toplayıp yönetebildiği envanter sisteminin altyapısını hazırladım." data-en="I prepared the infrastructure for the inventory system where the player can collect and manage items.">Oyuncunun eşya toplayıp yönetebildiği envanter sisteminin altyapısını hazırladım.</span></li>
+            <li><strong>Cinematic Logic:</strong> <span class="lang-text" data-tr="Oyun içi ara sahnelerin tetiklenme ve oynatılma kodlarını yazdım." data-en="I wrote the trigger and playback codes for in-game cutscenes.">Oyun içi ara sahnelerin tetiklenme ve oynatılma kodlarını yazdım.</span></li>
+            <li><strong>UI/UX Programming:</strong> <span class="lang-text" data-tr="Ana menü ve oyun içi arayüzlerin kod tarafındaki fonksiyonlarını entegre ettim." data-en="I integrated the backend functions of the main menu and in-game UI.">Ana menü ve oyun içi arayüzlerin kod tarafındaki fonksiyonlarını entegre ettim.</span></li>
           </ul>
 
           <div class="game-buttons mt-3">
-            <a href="https://github.com/kullaniciadin/Hermes-Project" target="_blank" class="btn btn-primary">
+            <a href="https://github.com/kullaniciadin/Hermes-Project" target="_blank" class="btn btn-primary lang-text" data-tr="Geliştirme Sürecini İncele" data-en="Review Development Process">
               <i class="fa-brands fa-github"></i> Geliştirme Sürecini İncele
             </a>
-            </div>
+          </div>
         </div>
 
         <div class="col-4">
           <div class="tech-box">
-            <h4>Proje Bilgileri</h4>
+            <h4 class="lang-text" data-tr="Proje Bilgileri" data-en="Project Details">Proje Bilgileri</h4>
             <ul>
-              <li><i class="fa-solid fa-gamepad"></i> <strong>Tür:</strong> Open World, Adventure, RPG</li>
-              <li><i class="fa-solid fa-microchip"></i> <strong>Motor:</strong> Unreal Engine 5.6.1 </li>
-              <li><i class="fa-solid fa-code"></i> <strong>Dil:</strong> Blueprint Visual Scripting</li>
-              <li><i class="fa-solid fa-calendar"></i> <strong>Süre:</strong> Devam Ediyor (2. Ay)</li>
-              <li><i class="fa-solid fa-users"></i> <strong>Takım:</strong> 5 Kişi</li>
-              <li><i class="fa-solid fa-desktop"></i> <strong>Platform:</strong> PC (Windows)</li>
+              <li><i class="fa-solid fa-gamepad"></i> <span class="lang-text" data-tr="<strong>Tür:</strong> Open World, Adventure, RPG" data-en="<strong>Genre:</strong> Open World, Adventure, RPG"><strong>Tür:</strong> Open World, Adventure, RPG</span></li>
+              <li><i class="fa-solid fa-microchip"></i> <span class="lang-text" data-tr="<strong>Motor:</strong> Unreal Engine 5.6.1" data-en="<strong>Engine:</strong> Unreal Engine 5.6.1"><strong>Motor:</strong> Unreal Engine 5.6.1</span></li>
+              <li><i class="fa-solid fa-code"></i> <span class="lang-text" data-tr="<strong>Dil:</strong> Blueprint Visual Scripting" data-en="<strong>Language:</strong> Blueprint Visual Scripting"><strong>Dil:</strong> Blueprint Visual Scripting</span></li>
+              <li><i class="fa-solid fa-calendar"></i> <span class="lang-text" data-tr="<strong>Süre:</strong> Devam Ediyor (2. Ay)" data-en="<strong>Duration:</strong> Ongoing (2nd Month)"><strong>Süre:</strong> Devam Ediyor (2. Ay)</span></li>
+              <li><i class="fa-solid fa-users"></i> <span class="lang-text" data-tr="<strong>Takım:</strong> 5 Kişi" data-en="<strong>Team:</strong> 5 People"><strong>Takım:</strong> 5 Kişi</span></li>
+              <li><i class="fa-solid fa-desktop"></i> <span class="lang-text" data-tr="<strong>Platform:</strong> PC (Windows)" data-en="<strong>Platform:</strong> PC (Windows)"><strong>Platform:</strong> PC (Windows)</span></li>
             </ul>
           </div>
           
           <div class="tech-box mt-2">
-            <h4>Kullanılan Araçlar</h4>
+            <h4 class="lang-text" data-tr="Kullanılan Araçlar" data-en="Tools Used">Kullanılan Araçlar</h4>
             <ul style="font-size: 0.9rem;">
               <li>• Unreal Engine 5 (Core)</li>
               <li>• Blender (3D Art) </li>
               <li>• Substance Painter (Texture) </li>
-              <li>• GitHub (Versiyon Kontrol) </li>
+              <li>• GitHub (<span class="lang-text" data-tr="Versiyon Kontrol" data-en="Version Control">Versiyon Kontrol</span>) </li>
             </ul>
           </div>
 
         </div>
 
-      </div> <h3 class="mt-3 text-center">Geliştirme Aşamasından Görüntüler</h3>
+      </div> 
+      
+      <h3 class="mt-3 text-center lang-text" data-tr="Geliştirme Aşamasından Görüntüler" data-en="Screenshots from Development">Geliştirme Aşamasından Görüntüler</h3>
       <div class="gallery-grid mt-2">
-        <img src="../img/game5.png" alt="Hermes Köy Tasarımı">
-        <img src="../img/game5.png" alt="Hermes Diyalog Sistemi">
-        <img src="../img/game5.png" alt="Hermes Envanter Arayüzü">
+        <img src="../img/game5.png" alt="Hermes Village Design">
+        <img src="../img/game5.png" alt="Hermes Dialogue System">
+        <img src="../img/game5.png" alt="Hermes Inventory UI">
       </div>
 
       <div class="mt-3 text-center">
-        <a href="/#projects" class="btn btn-primary">
+        <a href="/#projects" class="btn btn-primary lang-text" data-tr="Projelere Geri Dön" data-en="Return to Projects">
           <i class="fa-solid fa-arrow-left"></i> Projelere Geri Dön
         </a>
       </div>
