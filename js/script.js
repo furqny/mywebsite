@@ -172,3 +172,60 @@ document.addEventListener("DOMContentLoaded", () => {
         changeLang(savedLang);
     }
 });
+
+
+/* -------------------------------------- */
+/* 5. PARTICLES.JS (HAREKETLİ ARKA PLAN)  */
+/* -------------------------------------- */
+
+if (document.getElementById('particles-js')) {
+    particlesJS("particles-js", {
+        "particles": {
+            "number": {
+                "value": 70, // Ekranda uçuşan nokta sayısı (Göz yormaması için 70 ideal)
+                "density": { "enable": true, "value_area": 800 }
+            },
+            "color": { "value": ["#6366f1", "#a855f7", "#ffffff"] }, // Senin renklerin: İndigo, Mor ve Beyaz
+            "shape": { "type": "circle" },
+            "opacity": {
+                "value": 0.5,
+                "random": true,
+                "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false }
+            },
+            "size": {
+                "value": 3,
+                "random": true,
+                "anim": { "enable": true, "speed": 2, "size_min": 0.1, "sync": false }
+            },
+            "line_linked": {
+                "enable": true,
+                "distance": 150,
+                "color": "#6366f1", // Çizgi rengi
+                "opacity": 0.3,
+                "width": 1
+            },
+            "move": {
+                "enable": true,
+                "speed": 1.5, // Uçuşma hızı
+                "direction": "none",
+                "random": true,
+                "straight": false,
+                "out_mode": "out",
+                "bounce": false,
+            }
+        },
+        "interactivity": {
+            "detect_on": "window",
+            "events": {
+                "onhover": { "enable": true, "mode": "grab" }, // Fare yaklaşınca çizgilerle tutunur
+                "onclick": { "enable": true, "mode": "push" }, // Tıklayınca yeni parçacık ekler
+                "resize": true
+            },
+            "modes": {
+                "grab": { "distance": 160, "line_linked": { "opacity": 0.8 } },
+                "push": { "particles_nb": 3 } // Tıklayınca 3 tane fırlatır
+            }
+        },
+        "retina_detect": true
+    });
+}
