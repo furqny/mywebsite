@@ -310,6 +310,10 @@ footer {
   margin-bottom: 2rem;
 }
 
+.game-detail .col-8 p {
+  text-align: left;
+}
+
 .game-media img, .game-media iframe {
   width: 100%;
   border-radius: 12px;
@@ -360,21 +364,20 @@ footer {
 /* 8. LIGHTBOX (BÜYÜTEÇ) KODLARI - BURADA! */
 /* ========================================= */
 .lightbox {
-  display: none; /* Gizli başlar */
-  position: fixed; /* Ekrana sabitlenir */
-  z-index: 2000;   /* En üst katman */
+  display: none;
+  position: fixed;
+  z-index: 2000;
   padding-top: 60px;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.9); /* Siyah perde */
+  background-color: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
 }
 
-/* JavaScript "active" sınıfı ekleyince görünür olur */
 .lightbox.active {
   display: flex;
 }
@@ -396,7 +399,6 @@ footer {
   to {transform:scale(1)}
 }
 
-/* Kapatma ve İleri/Geri Butonları */
 .close-btn {
   position: absolute;
   top: 20px;
@@ -409,17 +411,16 @@ footer {
   z-index: 2001;
 }
 
-/* İleri / Geri Butonları (BÜYÜK BOY) */
 .prev-btn, .next-btn {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 20px;       /* Tıklama alanı genişledi */
+  padding: 20px;
   margin-top: -50px;
   color: white;
   font-weight: bold;
-  font-size: 55px;     /* Okları büyüten kod */
+  font-size: 55px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -442,7 +443,6 @@ footer {
 /* 9. MOBİL VE TABLET AYARLARI (SONDA) */
 /* ========================================= */
 
-/* Tablet ve Mobil Genel */
 @media (max-width: 900px) {
   .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, 
   .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
@@ -458,7 +458,6 @@ footer {
   .card { margin-bottom: 20px; }
 }
 
-/* Mobil Menü */
 @media (max-width: 768px) {
   nav {
     justify-content: space-between;
@@ -499,13 +498,12 @@ footer {
     font-size: 1.1rem;
   }
 
-  /* Mobilde Lightbox Okları */
   .prev-btn, .next-btn { 
     padding: 15px; 
-    font-size: 35px; /* Mobilde de büyüttük (Eski: 20px) */
+    font-size: 35px;
   }
 
-} /* DİKKAT: MOBİL MEDYA SORGUSU BURADA BİTİYOR! */
+}
 
 /* ========================================= */
 /* 10. DİL SEÇENEĞİ (LANGUAGE SWITCHER)      */
@@ -524,7 +522,7 @@ footer {
 
 .lang-switch span {
     cursor: pointer;
-    color: #6b7280; /* Pasif renk (Gri) */
+    color: #6b7280; 
     transition: color 0.3s ease;
 }
 
@@ -533,7 +531,7 @@ footer {
 }
 
 .lang-switch span.active-lang {
-    color: #a855f7; /* Aktif dil rengi (Mor) */
+    color: #a855f7;
 }
 
 .lang-switch .separator {
