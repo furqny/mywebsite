@@ -1,6 +1,20 @@
 /* ========================================= */
 /* 1. GENEL AYARLAR VE SIFIRLAMA        */
 /* ========================================= */
+:root {
+  --bg-dark: #020617;
+  --card-bg: #0f172a;
+  --border-color: #1f2937;
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --accent-purple: #a855f7;
+  --accent-gold: #ffc35a;
+  --text-primary: #e5e7eb;
+  --text-secondary: #9ca3af;
+  --font-family: 'Poppins', sans-serif;
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -11,11 +25,11 @@ html {
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   font-style: normal;
   background-color: transparent;
-  color: #e5e7eb;
+  color: var(--text-primary);
 }
 
 p {
@@ -28,7 +42,7 @@ p {
 /* ========================================= */
 header {
  background: rgba(15, 23, 42, 0.95);
-  border-bottom: 1px solid #1f2937;
+  border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -45,13 +59,14 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #e5e7eb;
+  color: var(--text-primary);
   font-weight: 500;
   font-size: 0.95rem;
   position: relative;
+  transition: color 0.2s ease;
 }
 
-nav a:hover {
+nav a:hover, nav a.active {
   color: #c7d2fe;
 }
 
@@ -62,11 +77,11 @@ nav a::after {
   bottom: -4px;
   width: 0;
   height: 2px;
-  background: #6366f1;
+  background: var(--primary);
   transition: width 0.2s ease;
 }
 
-nav a:hover::after {
+nav a:hover::after, nav a.active::after {
   width: 100%;
 }
 
@@ -75,7 +90,7 @@ nav a:hover::after {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: #e5e7eb;
+  color: var(--text-primary);
 }
 
 .nav-links {
@@ -94,7 +109,7 @@ nav a:hover::after {
 .row {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .col-12 { grid-column: span 12; }
@@ -126,7 +141,6 @@ section {
   text-align: center;
   color: white;
   padding: 0;
-  /*background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/first.png');*/
   background-size: cover;      
   background-position: center; 
   background-attachment: fixed;
@@ -135,22 +149,57 @@ section {
 .hero-text {
   z-index: 1;
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-text h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
   margin-bottom: 0.5rem;
   font-weight: 700;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  background: linear-gradient(135deg, #ffffff 0%, #c7d2fe 50%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-.hero-text p {
-  font-size: 1.5rem;
-  font-weight: 300;
+.hero-subtitle {
+  font-size: 1.4rem;
+  font-weight: 400;
   max-width: 600px;
-  margin: 0 auto;
-  opacity: 0.9;
-  letter-spacing: 1px;
+  margin: 0 auto 1.5rem;
+  color: var(--accent-purple);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.scroll-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-top: 2rem;
+  transition: var(--transition-smooth);
+  animation: bounce 2s infinite;
+}
+
+.scroll-indicator:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-8px); }
+  60% { transform: translateY(-4px); }
 }
 
 /* ========================================= */
@@ -158,26 +207,27 @@ section {
 /* ========================================= */
 h2 {
   text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-h2 span { color: #6366f1; }
+h2 span { color: var(--primary); }
 
 h2 span::after {
   content: "";
   display: block;
-  width: 40px;
+  width: 50px;
   height: 3px;
-  background: #4f46e5;
-  margin: 8px auto 0;
+  background: var(--primary);
+  margin: 10px auto 0;
   border-radius: 999px;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
 }
 
 #projects { background: transparent; }
-#projects h2 { color: #e5e7eb; }
+#projects h2 { color: var(--text-primary); }
 #about { background: transparent; }
-#about p { max-width: 700px; margin: 0 auto; }
+#about p { max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
 
 /* Kartlar */
 .card {
@@ -209,6 +259,43 @@ h2 span::after {
 
 .card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
 .card p { font-size: 0.95rem; opacity: 0.9; }
+
+.card-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #d1d5db;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.badge-engine {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.4);
+  color: #a5b4fc;
+}
+
+.badge-engine-unreal {
+  background: rgba(168, 85, 247, 0.15);
+  border-color: rgba(168, 85, 247, 0.4);
+  color: #e9d5ff;
+}
+
+.badge-art {
+  background: rgba(255, 195, 90, 0.15);
+  border-color: rgba(255, 195, 90, 0.4);
+  color: #fde68a;
+}
 
 /* Butonlar */
 .btn {

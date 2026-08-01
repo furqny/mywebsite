@@ -1,12 +1,52 @@
 const menuToggle = document.getElementById('mobile-menu');
 const navLinks = document.getElementById('nav-links');
 
-if (menuToggle) {
+if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
 }
 
+// =========================================
+// Active Section Scrollspy (Navbar Highlight)
+// =========================================
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section[id]");
+    const navItems = document.querySelectorAll(".nav-links a[href^='#']");
+
+    if (sections.length > 0 && navItems.length > 0) {
+        const observerOptions = {
+            root: null,
+            rootMargin: "-20% 0px -60% 0px",
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const currentId = entry.target.getAttribute("id");
+                    navItems.forEach(link => {
+                        if (link.getAttribute("href") === `#${currentId}`) {
+                            link.classList.add("active");
+                        } else {
+                            link.classList.remove("active");
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+    }
+});
+
+// Lightbox functionality
 const galleryImages = document.querySelectorAll('.gallery-grid img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
@@ -86,38 +126,17 @@ if (lightbox) {
     });
 }
 
-document.addEventListener('dragstart', function(e) {
-    if (e.target.nodeName === 'IMG') {
-        e.preventDefault();
-    }
-}, false);
-
-document.addEventListener('keydown', function(e) {
-
-    if (e.key === 'F12') {
-        e.preventDefault();
-    }
-
-    if (e.ctrlKey && e.key === 'u') {
-        e.preventDefault();
-    }
-
-    if (e.ctrlKey && e.shiftKey && e.key === 'i') {
-        e.preventDefault();
-    }
-
-    if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'S')) {
-        e.preventDefault();
-    }
-});
-
 function changeLang(lang) {
 
     localStorage.setItem('selectedLang', lang);
 
-    document.getElementById('btn-en').classList.remove('active-lang');
-    document.getElementById('btn-tr').classList.remove('active-lang');
-    document.getElementById('btn-' + lang).classList.add('active-lang');
+    const btnEn = document.getElementById('btn-en');
+    const btnTr = document.getElementById('btn-tr');
+    if (btnEn) btnEn.classList.remove('active-lang');
+    if (btnTr) btnTr.classList.remove('active-lang');
+    
+    const activeBtn = document.getElementById('btn-' + lang);
+    if (activeBtn) activeBtn.classList.add('active-lang');
 
     const elements = document.querySelectorAll('.lang-text');
     elements.forEach(el => {
@@ -187,3 +206,4 @@ if (document.getElementById('particles-js')) {
         "retina_detect": true
     });
 }
+
