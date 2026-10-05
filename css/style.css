@@ -299,36 +299,50 @@ h2 span::after {
 
 /* Butonlar */
 .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 12px 28px;
+  border-radius: 12px;
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 0.98rem;
+  letter-spacing: 0.3px;
+  transition: var(--transition-smooth);
   border: 1px solid transparent;
   cursor: pointer;
+  backdrop-filter: blur(8px);
 }
 
 .btn-primary {
-  background-color: #6366f1;
-  color: white;
-  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .btn-primary:hover {
-  background-color: #4f46e5;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+  background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(168, 85, 247, 0.5);
+  color: #ffffff;
 }
 
 .btn-outline {
-  background: transparent;
-  border: 1px solid #6366f1;
-  color: #6366f1;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(99, 102, 241, 0.5);
+  color: #c7d2fe;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.btn-outline:hover { background: #6366f1; color: white; }
+.btn-outline:hover {
+  background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+  border-color: transparent;
+  color: #ffffff;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.45);
+}
 
 /* ========================================= */
 /* 6. İLETİŞİM VE FOOTER               */
@@ -697,4 +711,129 @@ model-viewer {
     left: 0;
     z-index: -1; /* Her şeyin arkasında durmasını sağlar */
     background-color: #020617; /* Orijinal arka plan rengimiz */
+}
+
+/* ========================================= */
+/* 12. CUSTOM SCROLLBAR & MICRO-ANIMATIONS  */
+/* ========================================= */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6366f1 0%, #a855f7 100%);
+  border-radius: 5px;
+  border: 2px solid #020617;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
+}
+
+/* Skills Grid & Pill Badges */
+.skills-wrapper {
+  text-align: center;
+  margin: 2.5rem auto 1.5rem;
+  max-width: 800px;
+}
+
+.skills-title {
+  font-size: 1.1rem;
+  color: #c7d2fe;
+  margin-bottom: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skill-pill i {
+  color: var(--primary);
+  font-size: 1.05rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-pill:hover {
+  border-color: var(--accent-purple);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.25);
+  color: #ffffff;
+}
+
+.skill-pill:hover i {
+  transform: scale(1.25);
+  color: var(--accent-purple);
+}
+
+/* CV Button Animation */
+.cv-btn {
+  border-color: var(--primary);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+}
+
+.cv-btn:hover {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent-purple) 100%);
+  border-color: transparent;
+  box-shadow: 0 6px 25px rgba(168, 85, 247, 0.4);
+  transform: translateY(-2px);
+}
+
+.cv-btn:hover .icon-bounce {
+  animation: iconBounce 0.6s ease infinite alternate;
+}
+
+@keyframes iconBounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-4px); }
+}
+
+/* Back Button for Subpages */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #d1d5db;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  transition: var(--transition-smooth);
+}
+
+.back-btn:hover {
+  color: #ffffff;
+  background: rgba(99, 102, 241, 0.2);
+  border-color: var(--primary);
+  transform: translateX(-4px);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
 }
